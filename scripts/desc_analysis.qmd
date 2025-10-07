@@ -1,0 +1,175 @@
+---
+title: "Descriptive analysis"
+author: "Johannes Zauner"
+format: 
+  html:
+    self-contained: true
+    code-tools: true
+---
+
+# Preface
+
+This is a work-in-progress descriptive analysis of the `Sancho-SalasEtAl2025` dataset.
+
+```{r}
+#| label: setup
+#| include: false
+library(LightLogR)
+library(glue)
+library(tidyverse)
+library(gt)
+library(readxl)
+library(cowplot)
+library(legendry)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(sf)
+library(patchwork)
+library(rlang)
+library(here)
+
+source("https://raw.githubusercontent.com/MeLiDosProject/Data_Metadata_Conventions/main/scripts/overview_plot.R")
+source(
+  "https://raw.githubusercontent.com/MeLiDosProject/Data_Metadata_Conventions/main/scripts/summary_table.R"
+)
+```
+
+# Overview
+
+## Data import: wearable data
+
+The first step is the import of wearable data from the `head` position (mounted on glasses).
+
+```{r}
+#| label: "general information"
+#time zone of Costa Rica
+tz <-  "America/Costa_Rica"
+#coordinates for Costa Rica
+coordinates <- c(9.9372, -84.0509)
+#regex to extract participant Id and wearing position
+# pattern <- "[A-Z]+_S[0-9]{3}_[hcw]"
+#regex to extract participant Id
+# pattern <- "^([0-9]{3})_"
+pattern <- "(UCRS[0-9]{3})_"
+
+country_colors <- c(
+  Sweden     = "#88CCEE",  # Sky blue
+  Spain      = "#CC6677",  # Coral red
+  Germany    = "#DDCC77",  # Mustard yellow
+  Netherlands= "#117733",  # Dark green
+  Turkey     = "#332288",  # Indigo
+  Ghana      = "#AA4499",  # Purple-pink
+  Costa_Rica = "#44AA99"   # Teal
+)
+
+```
+
+```{r}
+#path to participants
+path_part1 <- "data/raw/individual"
+#path to actlumus data sans wearing position
+path_part2 <- "/continuos/actlumus_"
+#wearing position
+wearing_position <- "chest"
+#getting all subfolders
+folders <- dir(here(path_part1))
+#creating complete folder names
+paths <- glue("{path_part1}/{folders}{path_part2}{wearing_position}")
+#collecting file names
+files <- list.files(here(paths), full.names = TRUE)
+files <- files[str_detect(files, "Report", negate = TRUE)]
+```
+
+```{r}
+#there remain some early data from a pilot collection. these will be removed
+data <- import$ActLumus(files, tz, auto.id = pattern, dst_adjustment = TRUE)
+
+#change names to conform to group
+data <- 
+data |> 
+  mutate(Id = fct_relabel(Id, \(x) sprintf("UCR_S%03d", parse_number(x))))
+```
+
+## Regularizing data
+
+In the first step, we will trim the data by the study time.
+
+```{r}
+#import table with study times
+Study_dates <- read_excel("../data/Study_dates_MeLiDos_UCR.xlsx")
+#gather the important information
+Study_dates <-
+  Study_dates |>
+    rename(Id = subjectID_device, start = date_trial_start, end = date_trial_end) |>
+    select(Id, start, end) |>
+    mutate(across(c(start, end), \(x) force_tz(x, tz)),
+           trial = TRUE) |>
+    drop_na() |> 
+    filter(str_detect(Id, "_c$")) |>
+    mutate(
+      Id = str_remove(Id, "_c$"),
+      Id = factor(Id)) |>
+  group_by(Id)
+
+#add the trim information to the dataset and filter by it
+data <-
+  data |>
+  add_states(Study_dates) |>
+  dplyr::filter(trial) |>
+  select(-trial)
+
+data |> gg_overview()
+
+# data |> summarize(min = min(Datetime), max = max(Datetime))
+```
+
+
+```{r}
+data |> has_gaps()
+data |> has_irregulars()
+
+data |> gg_gaps(group.by.days = TRUE, show.irregulars = TRUE, full.days = FALSE)
+```
+
+```{r}
+#| fig-height: 15
+#| fig-width: 5
+data_cleaned <- data |> gap_handler(full.days = TRUE)
+data_cleaned |> gap_table(MEDI) |> cols_hide(ends_with("_n"))
+```
+
+## Visualization
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-height: 8
+#| fig-width: 12
+
+data_cleaned |> 
+  mutate(Id = fct_relabel(Id, \(x) str_remove(x, "UCR_"))) |> 
+grand_overview(coordinates, "San José", "Costa Rica", "#44AA99", photoperiod_sequence = 0.2, ov_y.text.size = 5)
+
+ggsave("../output/figures/Figure_1.png", width = 17, height = 10, scale = 2, units = "cm")
+ggsave("../output/figures/Figure_1.pdf", width = 17, height = 10, scale = 2, units = "cm")
+```
+
+```{r}
+#| message: false
+#| warning: false
+
+table_summary <-
+light_summary_table(
+  data_cleaned, coordinates, "San Pedro, San José", "Costa Rica", country_colors["Costa_Rica"],
+  histograms = TRUE
+)
+
+table_summary
+
+gtsave(table_summary, here("output/tables/table_summary.png"), vwidth = 820)
+gtsave(table_summary, here("output/tables/table_summary.pdf"))
+gtsave(table_summary |> cols_hide(c(plot)), here("output/tables/table_summary.docx"))
+
+```
+
+

@@ -1,0 +1,3 @@
+record_id,redcap_repeat_instrument,redcap_repeat_instance,redcap_survey_identifier,salud_y_estilo_de_vida_timestamp,medication_v2,medication_type_v2,tobacco_v2,disorder_v2,gen_health_v2,visual_acuity_v2,availability_v2___1,availability_v2___2,availability_v2___3,availability_v2___4,availability_v2___5,availability_v2___6,availability_v2___7,availability_v2___8,availability_v2___9,availability_v2___10,availability_v2___11,availability_v2___12,availability_v2___13,uuid_3,startdate_3,enddate_3,scheduledate_3,status_3,supplementaldata_3,serializedresult_3,salud_y_estilo_de_vida_complete
+UCRS019,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+UCRS019,salud_y_estilo_de_vida,1,,,0,,0,0,1,2,0,0,0,0,0,1,0,0,0,0,0,0,0,,,,,,,,2
