@@ -64,7 +64,7 @@ APA reference:
 | Dataset name | UCR |
 |----|----|
 | Period of data collection (total) | June 2025 to September 2025 |
-| Location | Tuebingen, Germany |
+| Location | San Pedro, San José, Costa Rica |
 | Number of participants enrolled | N=40 |
 | Number of participants included in data analysis and this repository | N=39 |
 | Duration of experiment for each participant | N=7 days (Monday to Monday) |
