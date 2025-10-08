@@ -101,7 +101,7 @@ This folder contains grouped data, i.e. any data that are collected at the group
 | **screening** | N=1 csv file for N=39 participants containing screening information. |
 
 ## Individual
-This folder contains individual-level data for N=23 participant, each stored in a separate folder named after the participant ID (PID). The data within each participant folder follows the following structure. 
+This folder contains individual-level data for N=39 participants, each stored in a separate folder named after the participant ID (PID). The data within each participant folder follows the following structure. 
 
 | Folder name | Content |
 | --- | -- |

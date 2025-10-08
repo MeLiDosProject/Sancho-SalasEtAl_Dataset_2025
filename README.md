@@ -132,7 +132,7 @@ analyses.
 
 ## Individual
 
-This folder contains individual-level data for N=23 participant, each
+This folder contains individual-level data for N=39 participants, each
 stored in a separate folder named after the participant ID (PID). The
 data within each participant folder follows the following structure.
 
