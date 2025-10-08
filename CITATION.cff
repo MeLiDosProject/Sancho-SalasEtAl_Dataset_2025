@@ -37,10 +37,10 @@ authors:
     orcid: 'https://orcid.org/0000-0002-8572-9268'
 identifiers:
   - type: doi
-    value: ---
+    value: 10.5281/zenodo.17289457
     description: Zenodo archive (V1.0.0)
   - type: doi
-    value: ---
+    value: 10.5281/zenodo.17289456
     description: Zenodo Archive (latest version)
 repository-code: >-
   https://github.com/MeLiDosProject/GuidolinEtAl_Dataset_2025

@@ -12,8 +12,7 @@
 
 <!-- badges: start -->
 
-<!-- [![DOI](https://zenodo.org/badge/1040060126.svg)](https://doi.org/10.5281/zenodo.16895188) -->
-
+[![DOI](https://zenodo.org/badge/1071588346.svg)](https://doi.org/10.5281/zenodo.17289456)
 <!-- badges: end -->
 
 <figure>
@@ -58,7 +57,7 @@ APA reference:
 > (2025). Personal light exposure dataset for San Pedro, San José, Costa
 > Rica (Version 1.0.0) \[Data set\]. URL:
 > <https://github.com/MeLiDosProject/Sancho-SalasEtAl_Dataset_2025>.
-> DOI: —
+> DOI: 10.5281/zenodo.17289456
 
 ## Summary of the dataset
 
@@ -74,9 +73,11 @@ APA reference:
 
 The following files are included with this Dataset:
 
-- `data/Metadata_Melidos_TUM.xlsx`: Preliminary Metadata prior to
+- `data/Metadata_Melidos_UCR.xlsx`: Preliminary Metadata prior to
   conversion to JSON
-  <!-- - `data/Study_dates_MeLiDos_FUSPCEU.xlsx`: Recruitment dates to clean light exposure recordings -->
+
+- `data/Study_dates_MeLiDos_UCR.xlsx`: Recruitment dates to clean light
+  exposure recordings
 
 - `data`: Folder with measurement and project data in the following
   structure:
