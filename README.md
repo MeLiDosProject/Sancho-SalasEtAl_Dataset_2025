@@ -125,7 +125,7 @@ analyses.
 
 | Folder name | Content |
 |----|----|
-| **chronotype** | N=2 csv files, one for the Morning Eveningness Questionnaire (MEQ) and one for the Munich Chronotype Questionnaire (MCTQ). Each contains data for N=23 participants. |
+| **chronotype** | N=2 csv files, one for the Morning Eveningness Questionnaire (MEQ) and one for the Munich Chronotype Questionnaire (MCTQ). Each contains data for N=39 participants. |
 | **demographics** | N=1 csv files. Contains demographic information for N=39 participants. |
 | **discharge** | N=7 csv files, which contains answers from all questionnaires that N=39 participants had to fill at discharge: 1) Light Exposure Behaviour Assessment (LEBA instrument), 2) Visual Light Sensitivity Questionnaire-8 (VLSQ-8), 3) Assessment of Sleep Environment (ASE) questionnaire, 4) Modified Theory Framework of Acceptability (mTFA) questionnaire, 5) Feedback (1 Y/N and multiple choice questions). |
 | **screening** | N=1 csv file for N=39 participants containing screening information. |
