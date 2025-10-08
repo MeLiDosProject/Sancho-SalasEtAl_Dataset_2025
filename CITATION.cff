@@ -37,7 +37,7 @@ authors:
     orcid: 'https://orcid.org/0000-0002-8572-9268'
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.17289457
+    value: 10.5281/zenodo.17293236
     description: Zenodo archive (V1.0.0)
   - type: doi
     value: 10.5281/zenodo.17289456
