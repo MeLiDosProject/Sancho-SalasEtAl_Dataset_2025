@@ -172,4 +172,190 @@ gtsave(table_summary |> cols_hide(c(plot)), here("output/tables/table_summary.do
 
 ```
 
+## Adding sleep information
+
+```{r}
+#path to participants
+path_part1 <- "data/raw/individual"
+#path to sleep diary
+path_part3 <- "/continuos/sleepdiary"
+#getting all subfolders
+folders <- dir(here(path_part1))
+#creating complete folder names
+paths <- glue("{path_part1}/{folders}{path_part3}")
+#collecting file names
+files <- list.files(here(paths), full.names = TRUE)
+sleep_data <-
+  import_Statechanges(filename = files[c(3,9,10)],
+                      # sep = ";",
+                      # sep = ",",
+                      # dec = ",",
+                      Id.colname = record_id,
+                      Datetime.format = "mdYHM",
+                      tz = tz,
+                      State.colnames = c("sleep_v2", "offset_v2"),
+                      State.encoding = c("sleep", "wake")
+                      )
+
+#adjusting sleeptime for S009
+sleep_data[7,3] <- sleep_data[7,3] + dhours(3)
+
+Brown_data <- 
+sleep_data |> 
+  sc2interval(full = TRUE, starting.state = "wake") |> 
+  LightLogR::sleep_int2Brown(
+    Brown.day = "wake",
+    Brown.evening = "pre-s",
+    Brown.night = "sleep"
+  ) |> 
+  mutate(Id = fct_relabel(Id, \(x) sprintf("UCR_S%03d", parse_number(x))))
+
+
+```
+
+
+## Single out extreme patterns
+
+```{r}
+#| eval: false
+#| fig-width: 7
+#| fig-height: 7
+data_5min <- 
+data_cleaned |> 
+  select(Id, Datetime, MEDI) |> 
+  aggregate_Datetime("5 mins", numeric.handler = \(x) mean(x, na.rm = TRUE)) |> 
+  remove_partial_data(
+    MEDI, by.date = TRUE,
+  ) |> 
+  mutate(.Date = (date(Datetime) - min(date(Datetime)) + 1))
+  
+dose_data <- 
+data_5min |> 
+  add_Date_col(group.by = TRUE) |> 
+  summarize(
+    dose(
+      MEDI,
+      Datetime,
+      na.rm = TRUE,
+      as.df = TRUE
+    ),
+    .groups = "drop"
+  )
+
+dose_data |> 
+  ungroup() |> 
+  filter(dose == max(dose) | dose == min(dose))
+
+data_5min |> 
+  gg_day(facetting = FALSE, 
+         group = factor(.Date),
+         geom = "line", 
+         aes_col = factor(.Date)) +
+  facet_wrap(~Id, ncol = 2)
+
+data_5min_red <- 
+data_5min |> 
+  filter(Id %in% c("UCR_S010", "UCR_S003", "UCR_S009"))
+
+data_5min_red <- 
+data_5min_red |> 
+  interval2state(Brown_data, State.colname = State.Brown) |> 
+  Brown2reference(
+    Brown.day = "wake",
+    Brown.evening = "pre-s",
+    Brown.night = "sleep"
+  ) |> 
+  mutate(State.Brown = fct_relevel(State.Brown, 
+                                   "wake", "pre-s", "sleep"))
+
+Plot1 <- 
+data_5min_red |> 
+  # filter(Id %in% c("UCR_S010") & date(Datetime) == "2025-07-12") |> #High day low night
+  # filter(Id %in% c("UCR_S003") & date(Datetime) == "2025-06-19") |> #High night
+  # filter(Id %in% c("UCR_S009") & date(Datetime) == "2025-07-05") |> #low day
+  filter(date(Datetime) %in% c("2025-07-12", "2025-07-05", "2025-06-19")) |>
+  # filter(date(Datetime) %in% c("2025-07-01", "2025-07-05")) |>
+  add_Date_col() |>
+  add_photoperiod(coordinates) |> 
+  mutate(Id = fct_relevel(Id, "UCR_S010", "UCR_S003", "UCR_S009"),
+         Id = fct_recode(Id,
+                         "High daytime & low nighttime levels" = "UCR_S010",
+                         "High nighttime levels" = "UCR_S003",
+                         "Low daytime levels" = "UCR_S009"),
+         # Id = fct_reorder(Id, MEDI, .fun = min, .desc = TRUE), 
+         ) |>
+  gg_doubleplot(alpha = 0.8,
+                aes_col = State.Brown,
+                group = consecutive_id(State.Brown),
+                # aes_col = factor(Id), 
+                aes_fill = State.Brown,
+                # aes_fill = factor(Id),
+                facetting = FALSE,
+                y.axis.label = "Melanopic EDI (lx)") |> 
+  gg_photoperiod() +
+  guides(fill = "none", color = "none") +
+  facet_wrap(~Id, scales = "free_x", ncol = 1) +
+  coord_cartesian(ylim = c(0,20000)) +
+  labs(x = NULL) +
+  theme(
+        strip.background = element_blank()
+  ) +
+    ggplot2::theme_sub_axis(text = element_text(size = 10)) +
+  theme_sub_strip(text = element_text(face = "bold"))
+
+Plot2 <- 
+data_5min_red |> 
+  filter(date(Datetime) %in% c("2025-07-12", "2025-07-05", "2025-06-19")) |>
+  mutate(Id = fct_relevel(Id, "UCR_S010", "UCR_S003", "UCR_S009"),
+         Id = fct_recode(Id,
+                         " " = "UCR_S010",
+                         "  " = "UCR_S003",
+                         "   " = "UCR_S009")) |>
+  group_by(
+    State.Brown, .add = TRUE
+  ) |> 
+  summarize(
+    mean = mean(MEDI, na.rm = TRUE), .groups = "drop"
+  ) |> 
+  ggplot(aes(x = State.Brown, y = mean)) +
+  geom_col(aes(fill = State.Brown)) +
+  facet_wrap(~Id, ncol = 1, scales = "free_x") +
+  scale_y_continuous(trans = "symlog",
+                     breaks = c(0, 10^(0:5)),
+                     labels = 
+                     function(x) format(rep("", 7), 
+      scientific = FALSE, big.mark = " ")) +
+  coord_cartesian(ylim = c(0,20000)) +
+  cowplot::theme_cowplot() +
+  ggsci::scale_fill_jco() +
+  guides(fill = "none") +
+  labs(y = "Melanopic EDI (lx)", 
+       x = NULL
+       ) + 
+  # geom_text(aes(y = 0, 
+  #               label = State.Brown |> str_replace("-sleep", "-slp")), 
+  #           vjust = -0.1, size = 3) +
+  # annotate(geom = "text", 
+  #          x = 1, y = 20000, label = "wake", color = "black",
+  #          angle = 90, hjust = 1, size = 4)+
+  # annotate(geom = "text", 
+  #          x = 2, y = 20000, label = "pre-sleep", color = "black",
+  #          angle = 90, hjust = 1, size = 4)+
+  # annotate(geom = "text", 
+  #          x = 3, y = 20000, label = "sleep", color = "black",
+  #          angle = 90, hjust = 1, size = 4)+
+  ggplot2::theme(plot.title.position = "plot", 
+    strip.text.y = ggplot2::element_text(face = "bold", 
+      ), strip.placement = "outside", 
+    panel.grid.major.y = ggplot2::element_line("grey95"), 
+    strip.background = element_blank(),
+    # strip.text = element_blank(),
+    plot.margin = ggplot2::margin(10, 
+      20, 10, 10, "pt")) + 
+  ggplot2::theme_sub_axis(text = element_text(size = 10))
+  
+Plot1 + plot_spacer() + Plot2 + plot_layout(widths = c(6,-0.4, 1), axes = "collect")
+
+ggsave("../output/figures/Figure_patterns.png", width = 8*1.5, height = 7*1.5, scale = 2, units = "cm")
+```
 
