@@ -141,9 +141,12 @@ data_cleaned |> gap_table(MEDI) |> cols_hide(ends_with("_n"))
 ## Exporting hourly values
 
 ```{r}
+data_export <- 
 data_cleaned |> 
-  aggregate_Datetime("1 hour", numeric.handler = \(x) mean(x, na.rm = TRUE)) |> 
+  aggregate_Datetime("1 minute", numeric.handler = \(x) mean(x, na.rm = TRUE)) |> 
   remove_partial_data(MEDI, threshold.missing = "3 hours", by.date = TRUE)
+
+save(data_export, file = "../data/cr_1minute.RData")
 ```
 
 
