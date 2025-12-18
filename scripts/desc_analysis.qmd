@@ -90,6 +90,47 @@ data |>
   mutate(Id = fct_relabel(Id, \(x) sprintf("UCR_S%03d", parse_number(x))))
 ```
 
+```{r}
+paths_cc <- glue("{path_part1}/{folders}/continuos/currentconditions")
+#collecting file names
+files_cc <- list.files(here(paths_cc), full.names = TRUE)
+
+current_conditions <- read_csv(files_cc)
+
+current_conditions <- 
+current_conditions |> 
+  select(Id = record_id, start = startdate_4_v2, 
+         currentlight = currentight_v2, kss = kss_v2) |> 
+  mutate(start = force_tz(start, tz),
+         start = start - dminutes(30),
+         end = start + dhours(1),
+         Id = factor(Id)) |> 
+  drop_na(start) |> 
+  group_by(Id)
+```
+
+```{r}
+#| fig-width: 10
+#| fig-height: 5
+data <- 
+data |> 
+  select(Id, Datetime, MEDI) |> 
+  add_states(current_conditions)
+
+data |> 
+  filter(Id %in% c("UCRS001", "UCRS002")) |> 
+  gg_days() |> 
+  gg_state(currentlight, aes_fill = currentlight)
+
+data |> 
+  filter(Id %in% c("UCRS001", "UCRS002", "UCRS003")) |> 
+  gg_heatmap() +
+  geom_point(data = \(x) x |> drop_na(currentlight), 
+             aes(col = currentlight), size = 4) +
+  scale_color_manual(values = c(E = "yellow2", I = "skyblue3", L = "green2", O = "skyblue", S = "green3"))
+```
+
+
 ## Regularizing data
 
 In the first step, we will trim the data by the study time.
