@@ -99,6 +99,7 @@ gtsave(table_sleepdiary(data) |> as_gt(), filename = "../output/tables/table_sle
 ### Export
 
 ```{r}
+data <- data |> rename(Id = record_id)
 sleepdiary <- data
 path <- "../data/imported/continuous/"
 if(!dir.exists(path)) dir.create(path, recursive = TRUE)

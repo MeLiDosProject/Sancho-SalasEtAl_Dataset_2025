@@ -89,6 +89,7 @@ gtsave(table_demographics(data) |> as_gt(), filename = "../output/tables/table_d
 ### Export
 
 ```{r}
+data <- data |> rename(Id = record_id)
 demographics <- data
 path <- "../data/imported/"
 if(!dir.exists(path)) dir.create(path, recursive = TRUE)
