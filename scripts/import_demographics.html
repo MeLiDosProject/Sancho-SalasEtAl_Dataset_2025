@@ -2276,7 +2276,8 @@ vertical-align: -.125em;
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv2</span>(files, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(redcap_repeat_instance) <span class="sc">|&gt;</span> </span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2&quot;</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">native_language =</span> <span class="fu">as.logical</span>(native_language))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">native_language =</span> <span class="fu">as.logical</span>(native_language),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>ℹ Using &quot;&#39;,&#39;&quot; as decimal and &quot;&#39;.&#39;&quot; as grouping mark. Use `read_delim()` for more control.</code></pre>
 </div>
@@ -2284,20 +2285,20 @@ vertical-align: -.125em;
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="prqqvhhjmy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#prqqvhhjmy table {
+<div id="fejbcemoqh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fejbcemoqh table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#prqqvhhjmy thead, #prqqvhhjmy tbody, #prqqvhhjmy tfoot, #prqqvhhjmy tr, #prqqvhhjmy td, #prqqvhhjmy th {
+#fejbcemoqh thead, #fejbcemoqh tbody, #fejbcemoqh tfoot, #fejbcemoqh tr, #fejbcemoqh td, #fejbcemoqh th {
 border-style: none;
 }
-#prqqvhhjmy p {
+#fejbcemoqh p {
 margin: 0;
 padding: 0;
 }
-#prqqvhhjmy .gt_table {
+#fejbcemoqh .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2322,11 +2323,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_caption {
+#fejbcemoqh .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#prqqvhhjmy .gt_title {
+#fejbcemoqh .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -2337,7 +2338,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#prqqvhhjmy .gt_subtitle {
+#fejbcemoqh .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -2348,7 +2349,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#prqqvhhjmy .gt_heading {
+#fejbcemoqh .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -2359,12 +2360,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_bottom_border {
+#fejbcemoqh .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_col_headings {
+#fejbcemoqh .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2378,7 +2379,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_col_heading {
+#fejbcemoqh .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2397,7 +2398,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#prqqvhhjmy .gt_column_spanner_outer {
+#fejbcemoqh .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2408,13 +2409,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#prqqvhhjmy .gt_column_spanner_outer:first-child {
+#fejbcemoqh .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#prqqvhhjmy .gt_column_spanner_outer:last-child {
+#fejbcemoqh .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#prqqvhhjmy .gt_column_spanner {
+#fejbcemoqh .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -2425,10 +2426,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#prqqvhhjmy .gt_spanner_row {
+#fejbcemoqh .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#prqqvhhjmy .gt_group_heading {
+#fejbcemoqh .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2453,7 +2454,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#prqqvhhjmy .gt_empty_group_heading {
+#fejbcemoqh .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -2467,13 +2468,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#prqqvhhjmy .gt_from_md > :first-child {
+#fejbcemoqh .gt_from_md > :first-child {
 margin-top: 0;
 }
-#prqqvhhjmy .gt_from_md > :last-child {
+#fejbcemoqh .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#prqqvhhjmy .gt_row {
+#fejbcemoqh .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2491,7 +2492,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#prqqvhhjmy .gt_stub {
+#fejbcemoqh .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2503,7 +2504,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#prqqvhhjmy .gt_stub_row_group {
+#fejbcemoqh .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2516,13 +2517,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#prqqvhhjmy .gt_row_group_first td {
+#fejbcemoqh .gt_row_group_first td {
 border-top-width: 2px;
 }
-#prqqvhhjmy .gt_row_group_first th {
+#fejbcemoqh .gt_row_group_first th {
 border-top-width: 2px;
 }
-#prqqvhhjmy .gt_summary_row {
+#fejbcemoqh .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2531,14 +2532,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#prqqvhhjmy .gt_first_summary_row {
+#fejbcemoqh .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_first_summary_row.thick {
+#fejbcemoqh .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#prqqvhhjmy .gt_last_summary_row {
+#fejbcemoqh .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2547,7 +2548,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_grand_summary_row {
+#fejbcemoqh .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2556,7 +2557,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#prqqvhhjmy .gt_first_grand_summary_row {
+#fejbcemoqh .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2565,7 +2566,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_last_grand_summary_row_top {
+#fejbcemoqh .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2574,10 +2575,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_striped {
+#fejbcemoqh .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#prqqvhhjmy .gt_table_body {
+#fejbcemoqh .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2585,7 +2586,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_footnotes {
+#fejbcemoqh .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2598,7 +2599,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_footnote {
+#fejbcemoqh .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -2606,7 +2607,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#prqqvhhjmy .gt_sourcenotes {
+#fejbcemoqh .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2619,64 +2620,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#prqqvhhjmy .gt_sourcenote {
+#fejbcemoqh .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#prqqvhhjmy .gt_left {
+#fejbcemoqh .gt_left {
 text-align: left;
 }
-#prqqvhhjmy .gt_center {
+#fejbcemoqh .gt_center {
 text-align: center;
 }
-#prqqvhhjmy .gt_right {
+#fejbcemoqh .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#prqqvhhjmy .gt_font_normal {
+#fejbcemoqh .gt_font_normal {
 font-weight: normal;
 }
-#prqqvhhjmy .gt_font_bold {
+#fejbcemoqh .gt_font_bold {
 font-weight: bold;
 }
-#prqqvhhjmy .gt_font_italic {
+#fejbcemoqh .gt_font_italic {
 font-style: italic;
 }
-#prqqvhhjmy .gt_super {
+#fejbcemoqh .gt_super {
 font-size: 65%;
 }
-#prqqvhhjmy .gt_footnote_marks {
+#fejbcemoqh .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#prqqvhhjmy .gt_asterisk {
+#fejbcemoqh .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#prqqvhhjmy .gt_indent_1 {
+#fejbcemoqh .gt_indent_1 {
 text-indent: 5px;
 }
-#prqqvhhjmy .gt_indent_2 {
+#fejbcemoqh .gt_indent_2 {
 text-indent: 10px;
 }
-#prqqvhhjmy .gt_indent_3 {
+#fejbcemoqh .gt_indent_3 {
 text-indent: 15px;
 }
-#prqqvhhjmy .gt_indent_4 {
+#fejbcemoqh .gt_indent_4 {
 text-indent: 20px;
 }
-#prqqvhhjmy .gt_indent_5 {
+#fejbcemoqh .gt_indent_5 {
 text-indent: 25px;
 }
-#prqqvhhjmy .katex-display {
+#fejbcemoqh .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#prqqvhhjmy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fejbcemoqh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -2825,20 +2826,20 @@ consent</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table_demographics</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="mbwvgwdsgm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mbwvgwdsgm table {
+<div id="lfztjzmfsn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lfztjzmfsn table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#mbwvgwdsgm thead, #mbwvgwdsgm tbody, #mbwvgwdsgm tfoot, #mbwvgwdsgm tr, #mbwvgwdsgm td, #mbwvgwdsgm th {
+#lfztjzmfsn thead, #lfztjzmfsn tbody, #lfztjzmfsn tfoot, #lfztjzmfsn tr, #lfztjzmfsn td, #lfztjzmfsn th {
 border-style: none;
 }
-#mbwvgwdsgm p {
+#lfztjzmfsn p {
 margin: 0;
 padding: 0;
 }
-#mbwvgwdsgm .gt_table {
+#lfztjzmfsn .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2863,11 +2864,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_caption {
+#lfztjzmfsn .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#mbwvgwdsgm .gt_title {
+#lfztjzmfsn .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -2878,7 +2879,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#mbwvgwdsgm .gt_subtitle {
+#lfztjzmfsn .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -2889,7 +2890,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#mbwvgwdsgm .gt_heading {
+#lfztjzmfsn .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -2900,12 +2901,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_bottom_border {
+#lfztjzmfsn .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_col_headings {
+#lfztjzmfsn .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2919,7 +2920,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_col_heading {
+#lfztjzmfsn .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2938,7 +2939,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#mbwvgwdsgm .gt_column_spanner_outer {
+#lfztjzmfsn .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2949,13 +2950,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#mbwvgwdsgm .gt_column_spanner_outer:first-child {
+#lfztjzmfsn .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#mbwvgwdsgm .gt_column_spanner_outer:last-child {
+#lfztjzmfsn .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#mbwvgwdsgm .gt_column_spanner {
+#lfztjzmfsn .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -2966,10 +2967,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#mbwvgwdsgm .gt_spanner_row {
+#lfztjzmfsn .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#mbwvgwdsgm .gt_group_heading {
+#lfztjzmfsn .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2994,7 +2995,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#mbwvgwdsgm .gt_empty_group_heading {
+#lfztjzmfsn .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -3008,13 +3009,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#mbwvgwdsgm .gt_from_md > :first-child {
+#lfztjzmfsn .gt_from_md > :first-child {
 margin-top: 0;
 }
-#mbwvgwdsgm .gt_from_md > :last-child {
+#lfztjzmfsn .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#mbwvgwdsgm .gt_row {
+#lfztjzmfsn .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3032,7 +3033,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#mbwvgwdsgm .gt_stub {
+#lfztjzmfsn .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3044,7 +3045,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mbwvgwdsgm .gt_stub_row_group {
+#lfztjzmfsn .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3057,13 +3058,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#mbwvgwdsgm .gt_row_group_first td {
+#lfztjzmfsn .gt_row_group_first td {
 border-top-width: 2px;
 }
-#mbwvgwdsgm .gt_row_group_first th {
+#lfztjzmfsn .gt_row_group_first th {
 border-top-width: 2px;
 }
-#mbwvgwdsgm .gt_summary_row {
+#lfztjzmfsn .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3072,14 +3073,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mbwvgwdsgm .gt_first_summary_row {
+#lfztjzmfsn .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_first_summary_row.thick {
+#lfztjzmfsn .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#mbwvgwdsgm .gt_last_summary_row {
+#lfztjzmfsn .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3088,7 +3089,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_grand_summary_row {
+#lfztjzmfsn .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3097,7 +3098,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mbwvgwdsgm .gt_first_grand_summary_row {
+#lfztjzmfsn .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3106,7 +3107,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_last_grand_summary_row_top {
+#lfztjzmfsn .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3115,10 +3116,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_striped {
+#lfztjzmfsn .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#mbwvgwdsgm .gt_table_body {
+#lfztjzmfsn .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3126,7 +3127,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_footnotes {
+#lfztjzmfsn .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3139,7 +3140,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_footnote {
+#lfztjzmfsn .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -3147,7 +3148,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mbwvgwdsgm .gt_sourcenotes {
+#lfztjzmfsn .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3160,64 +3161,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#mbwvgwdsgm .gt_sourcenote {
+#lfztjzmfsn .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mbwvgwdsgm .gt_left {
+#lfztjzmfsn .gt_left {
 text-align: left;
 }
-#mbwvgwdsgm .gt_center {
+#lfztjzmfsn .gt_center {
 text-align: center;
 }
-#mbwvgwdsgm .gt_right {
+#lfztjzmfsn .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#mbwvgwdsgm .gt_font_normal {
+#lfztjzmfsn .gt_font_normal {
 font-weight: normal;
 }
-#mbwvgwdsgm .gt_font_bold {
+#lfztjzmfsn .gt_font_bold {
 font-weight: bold;
 }
-#mbwvgwdsgm .gt_font_italic {
+#lfztjzmfsn .gt_font_italic {
 font-style: italic;
 }
-#mbwvgwdsgm .gt_super {
+#lfztjzmfsn .gt_super {
 font-size: 65%;
 }
-#mbwvgwdsgm .gt_footnote_marks {
+#lfztjzmfsn .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#mbwvgwdsgm .gt_asterisk {
+#lfztjzmfsn .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#mbwvgwdsgm .gt_indent_1 {
+#lfztjzmfsn .gt_indent_1 {
 text-indent: 5px;
 }
-#mbwvgwdsgm .gt_indent_2 {
+#lfztjzmfsn .gt_indent_2 {
 text-indent: 10px;
 }
-#mbwvgwdsgm .gt_indent_3 {
+#lfztjzmfsn .gt_indent_3 {
 text-indent: 15px;
 }
-#mbwvgwdsgm .gt_indent_4 {
+#lfztjzmfsn .gt_indent_4 {
 text-indent: 20px;
 }
-#mbwvgwdsgm .gt_indent_5 {
+#lfztjzmfsn .gt_indent_5 {
 text-indent: 25px;
 }
-#mbwvgwdsgm .katex-display {
+#lfztjzmfsn .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#mbwvgwdsgm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lfztjzmfsn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -3396,7 +3397,7 @@ height: 0px !important;
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_demographics</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_demographics.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>file:////var/folders/9p/326_k3kx43qbn_cyl1rqfhb00000gn/T//RtmpP1Ojwz/filef9181fd56adb.html screenshot completed</code></pre>
+<pre><code>file:////var/folders/9p/326_k3kx43qbn_cyl1rqfhb00000gn/T//RtmpwGwTRK/file1301d10c827fa.html screenshot completed</code></pre>
 </div>
 </div>
 <section id="export" class="level3">
@@ -3406,7 +3407,8 @@ height: 0px !important;
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>demographics <span class="ot">&lt;-</span> data</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/&quot;</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(demographics, <span class="at">file =</span> <span class="st">&quot;../data/imported/continuous/demographics.RData&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(demographics, <span class="at">file =</span> <span class="st">&quot;../data/imported/demographics.RData&quot;</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">&quot;../data/imported/demographics.RData&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <!-- -->
 
@@ -3920,49 +3922,51 @@ height: 0px !important;
 <span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv2</span>(files, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(redcap_repeat_instance) <span class="sc">|&gt;</span> </span>
 <span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2&quot;</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">native_language =</span> <span class="fu">as.logical</span>(native_language))</span>
-<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
-<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
-<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span>
-<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns</span></span>
-<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
-<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
-<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
-<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
-<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
-<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
-<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
-<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
-<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
-<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
-<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
-<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span>
-<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder variables</span></span>
-<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
-<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
-<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">relocate</span>(native_language, <span class="at">.before =</span> language_specification) <span class="sc">|&gt;</span> </span>
-<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(record_id)</span>
-<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summarize results</span></span>
-<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a><span class="fu">table_demographics</span>(data)</span>
-<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_demographics</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_demographics.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span>
-<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
-<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
-<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a>demographics <span class="ot">&lt;-</span> data</span>
-<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/&quot;</span></span>
-<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(demographics, <span class="at">file =</span> <span class="st">&quot;../data/imported/continuous/demographics.RData&quot;</span>)</span>
-<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">native_language =</span> <span class="fu">as.logical</span>(native_language),</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>))</span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns</span></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder variables</span></span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">relocate</span>(native_language, <span class="at">.before =</span> language_specification) <span class="sc">|&gt;</span> </span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(record_id)</span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summarize results</span></span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a><span class="fu">table_demographics</span>(data)</span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_demographics</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_demographics.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
+<span id="cb15-102"><a href="#cb15-102" aria-hidden="true" tabindex="-1"></a>demographics <span class="ot">&lt;-</span> data</span>
+<span id="cb15-103"><a href="#cb15-103" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/&quot;</span></span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(demographics, <span class="at">file =</span> <span class="st">&quot;../data/imported/demographics.RData&quot;</span>)</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">&quot;../data/imported/demographics.RData&quot;</span>)</span>
+<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

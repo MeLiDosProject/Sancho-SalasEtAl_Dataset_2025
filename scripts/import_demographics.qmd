@@ -52,7 +52,8 @@ data <-
   read_csv2(files, show_col_types = FALSE) |> 
   drop_na(redcap_repeat_instance) |> 
   rename_with(\(x) str_remove(x, "_v2")) |> 
-  mutate(native_language = as.logical(native_language))
+  mutate(native_language = as.logical(native_language),
+         record_id = str_replace(record_id, "UCR", "UCR_"))
 #check column types
 coltype_check <- coltype_checker(codebook, data)
 coltype_check$details |> gt()
@@ -93,5 +94,5 @@ data <- data |> rename(Id = record_id)
 demographics <- data
 path <- "../data/imported/"
 if(!dir.exists(path)) dir.create(path, recursive = TRUE)
-save(demographics, file = "../data/imported/continuous/demographics.RData")
+save(demographics, file = "../data/imported/demographics.RData")
 ```

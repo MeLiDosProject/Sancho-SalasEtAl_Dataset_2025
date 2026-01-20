@@ -49,7 +49,9 @@ data <-
   drop_na(redcap_repeat_instance) |> 
   rename_with(\(x) str_remove(x, "_v2")) |> 
   mutate(across(c(bedtime, sleep, offset, out_ofbed),
-                \(x) parse_date_time(x, orders = c("mdyHM", "ymdHM"))))
+                \(x) parse_date_time(x, orders = c("mdyHM", "ymdHM"))),
+         record_id = str_replace(record_id, "UCR", "UCR_")
+         )
 #check column types
 coltype_check <- coltype_checker(codebook, data)
 coltype_check$details |> gt()
@@ -86,6 +88,8 @@ data |>
 
 attr(data$sleep, "label") <- "Sleep onset (calculated)"
 attr(data$sleep_duration, "label") <- "Sleep duration (calculated)"
+data <- 
+  data |> drop_na(sleepprep)
 ```
 
 ## Summarize results
