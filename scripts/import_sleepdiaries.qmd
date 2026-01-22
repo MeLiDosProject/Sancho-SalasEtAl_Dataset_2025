@@ -100,6 +100,17 @@ table_sleepdiary(data)
 gtsave(table_sleepdiary(data) |> as_gt(), filename = "../output/tables/table_sleepdiary.png", vwidth = 800)
 ```
 
+
+### Set sleep time zone
+```{r}
+site = "UCR"
+data <- 
+  data |> 
+  mutate(across(where(is.POSIXct), 
+                \(x) force_tz(x, tzs[[site]]))
+         )
+```
+
 ### Export
 
 ```{r}
