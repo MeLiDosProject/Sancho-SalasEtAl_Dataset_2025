@@ -94,10 +94,10 @@ data <-
 data |> 
   rowwise() |> 
   mutate(leba_f2_04 = fct_rev(leba_f2_04), 
-         leba_f2 = rowSums(across(contains(factors_leba$F2), as.numeric), na.rm = TRUE),
-         leba_f3 = rowSums(across(contains(factors_leba$F3), as.numeric), na.rm = TRUE),
-         leba_f4 = rowSums(across(contains(factors_leba$F4), as.numeric), na.rm = TRUE),
-         leba_f5 = rowSums(across(contains(factors_leba$F5), as.numeric), na.rm = TRUE),
+         leba_f2 = rowSums(across(contains(factors_leba$F2), as.numeric)),
+         leba_f3 = rowSums(across(contains(factors_leba$F3), as.numeric)),
+         leba_f4 = rowSums(across(contains(factors_leba$F4), as.numeric)),
+         leba_f5 = rowSums(across(contains(factors_leba$F5), as.numeric)),
          ) |> 
   mutate(leba_f2_04 = fct_rev(leba_f2_04)) |> 
   relocate(leba_f2:leba_f5, .after = record_id)
