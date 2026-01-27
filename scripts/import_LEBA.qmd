@@ -62,6 +62,10 @@ relevant_columns <-
   pull(col)
 #select relevant columns
 data <- data |> select(any_of(relevant_columns))
+#recode levels to conform with LEBA 
+data <-
+  data |> 
+  mutate(across(c(leba_f3_13, leba_f3_14), \(x) ifelse(x == 6, 1, x)))
 #label
 data <-
 data |> 
