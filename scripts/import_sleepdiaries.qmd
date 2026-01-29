@@ -65,6 +65,20 @@ relevant_columns <-
 relevant_columns <- c("record_id", relevant_columns, "comments")
 #select relevant columns
 data <- data |> select(any_of(relevant_columns))
+```
+
+
+### Set sleep time zone
+```{r}
+site = "UCR"
+data <- 
+  data |> 
+  mutate(across(where(is.POSIXct), 
+                \(x) force_tz(x, tzs[[site]]))
+         )
+```
+
+```{r}
 #label variables
 data <-
 data |> 
@@ -100,16 +114,6 @@ table_sleepdiary(data)
 gtsave(table_sleepdiary(data) |> as_gt(), filename = "../output/tables/table_sleepdiary.png", vwidth = 800)
 ```
 
-
-### Set sleep time zone
-```{r}
-site = "UCR"
-data <- 
-  data |> 
-  mutate(across(where(is.POSIXct), 
-                \(x) force_tz(x, tzs[[site]]))
-         )
-```
 
 ### Export
 
