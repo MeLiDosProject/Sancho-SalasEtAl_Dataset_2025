@@ -65,6 +65,9 @@ data2 <-
     )
 data <- data |> bind_rows(data2)
 rm(data2)
+if(!"improvements_v3" %in% names(data)){
+  data$improvements_v3 <- NA_character_
+}
   # drop_na(redcap_repeat_instance)
 #check column types
 coltype_check <- coltype_checker(codebook, data)
@@ -117,7 +120,8 @@ Native language is translated into English with AI and later checked by a site r
 #   act_impact_english = type_string("Translate (or if in english already, copy) the 'act_impact' column here. Question: In what situations did you notice the light glasses having the most impact on your daily activities or behavior?", required = FALSE),
 #   beh_adapt_english = type_string("Translate (or if in english already, copy) the 'beh_adapt' column here. Question: How did you adapt your behaviour, if at all, because of the light glasses? Please provide some examples.", required = FALSE),
 #   social_english = type_string("Translate (or if in english already, copy) the 'social' column here. Question: Were there any social situations or interactions where the presence of the light glasses caused curiosity, feedback and/or other reactions?", required = FALSE),
-#   improvements_english = type_string("Translate (or if in english already, copy) the 'social' column here. Question: Can you share any suggestions or improvements for the design or functionality of the light glasses (comprising the sensor and the glasses) for future experiments?", required = FALSE)
+#   improvements_english = type_string("Translate (or if in english already, copy) the 'social' column here. Question: Can you share any suggestions or improvements for the design or functionality of the light glasses (comprising the sensor and the glasses) for future experiments?", required = FALSE),
+#   improvements_v3_english = type_string("Translate (or if in english already, copy) the 'social' column here. Question: At the end of the measurement week, do you think that completing the questionnaires has changed your behavior with regard to light exposure, sleep, or other factors? If so, in what way?", required = FALSE)
 # )
 # 
 # data_llm <-
