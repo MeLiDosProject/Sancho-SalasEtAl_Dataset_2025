@@ -7,5 +7,145 @@ UCR_S003,mano,hand
 UCR_S004,NA,NA
 UCR_S005,NA,NA
 UCR_S005,A la par de mi cama,Next to my bed
-UCR_S005,a la par de mi cama,next to my bed
+UCR_S005,a la par de mi cama,beside my bed
 UCR_S006,NA,NA
+UCR_S007,NA,NA
+UCR_S007,en el cuarto,in the room
+UCR_S007,en el cuarto en el mueble del tv,in the bedroom on the TV cabinet
+UCR_S007,mueble tv,TV cabinet
+UCR_S007,mesa de noche,nightstand
+UCR_S008,mochila,backpack
+UCR_S008,NA,NA
+UCR_S008,cajón,drawer
+UCR_S008,mesa de noche,nightstand
+UCR_S008,mesa,table
+UCR_S008,locker,locker
+UCR_S009,NA,NA
+UCR_S010,NA,NA
+UCR_S010,En la mesa,On the table
+UCR_S010,en la mesa de noche,on the nightstand
+UCR_S010,en la mesa,on the table
+UCR_S010,mesa,table
+UCR_S011,en un locker cerrado,in a closed locker
+UCR_S011,sobre la comoda del cuarto,on the bedroom dresser
+UCR_S011,NA,NA
+UCR_S011,en el bulto,on the waist
+UCR_S011,sobre la cómoda,on the dresser
+UCR_S011,en el bolso sobre la mesa,in the bag on the table
+UCR_S011,en la comoda,on the dresser
+UCR_S012,NA,NA
+UCR_S013,NA,NA
+UCR_S013,En un cajón,In a drawer
+UCR_S013,Cajon,Cajon
+UCR_S014,NA,NA
+UCR_S014,en el mueble del baño mientras me duchaba,on the bathroom furniture while I showered
+UCR_S014,en la mesa junto a mi cama,on the table next to my bed
+UCR_S014,junto a mi cama,next to my bed
+UCR_S014,en el mueble del baño junto a la ducha,on the bathroom cabinet next to the shower
+UCR_S014,mesa junto a la cama,table next to the bed
+UCR_S014,mueble del baño,bathroom cabinet
+UCR_S014,mesa junto a cama,table next to bed
+UCR_S014,mueble del área de baño,bathroom area furniture
+UCR_S014,mesa junto a mi cama,table next to my bed
+UCR_S015,NA,NA
+UCR_S015,el bolso,the bag
+UCR_S015,encimera,countertop
+UCR_S016,en la mesa de noche,on the nightstand
+UCR_S016,NA,NA
+UCR_S016,mesa de noche,nightstand
+UCR_S016,mesa de trabajo,work desk
+UCR_S017,NA,NA
+UCR_S017,mesa de noche,nightstand
+UCR_S017,correr,to run
+UCR_S017,mesa de noche.,nightstand.
+UCR_S018,NA,NA
+UCR_S018,escritorio,desk
+UCR_S019,NA,NA
+UCR_S019,mesa,table
+UCR_S019,sobre el lava manos,on the sink
+UCR_S019,sobre el tanque del baño,on top of the toilet tank
+UCR_S019,auto,car
+UCR_S019,en la mesa,on the table
+UCR_S020,NA,NA
+UCR_S020,encima de una mesa cercana al baño,on top of a table near the bathroom
+UCR_S020,dentro del bulto,inside the bundle
+UCR_S020,en una mesa cerca del baño,on a table near the bathroom
+UCR_S020,encima de una mesa cerca del baño,on top of a table near the bathroom
+UCR_S020,encima de la mesa cerca del baño,on the table near the bathroom
+UCR_S021,NA,NA
+UCR_S021,en un mueble,on a piece of furniture
+UCR_S021,sobre un mueble,on a piece of furniture
+UCR_S022,NA,NA
+UCR_S022,en la mesita de noche,on the nightstand
+UCR_S022,mesita de noche,nightstand
+UCR_S022,mesa de trabajo,work desk
+UCR_S023,NA,NA
+UCR_S023,sobre el lavatorio,on the sink
+UCR_S023,en un cajón,in a drawer
+UCR_S023,cajón,drawer
+UCR_S025,en la mochila dentro de una bolada negra,in the backpack inside a black plastic bag
+UCR_S025,NA,NA
+UCR_S025,en el escritorio,on the desk
+UCR_S025,dentro de un maletín,inside a briefcase
+UCR_S025,escritorio,desk
+UCR_S025,en una mochila,in a backpack
+UCR_S025,mochila,backpack
+UCR_S025,sobre el escritorio,on the desk
+UCR_S026,NA,NA
+UCR_S026,cama,bed
+UCR_S027,NA,NA
+UCR_S027,mueble del baño,bathroom cabinet
+UCR_S027,mueble de baño,bathroom cabinet
+UCR_S027,mueble baño,bathroom cabinet
+UCR_S028,en un casillero en gimnasio,in a locker at the gym
+UCR_S028,NA,NA
+UCR_S029,NA,NA
+UCR_S029,En la gaveta del escritorio,In the desk drawer
+UCR_S029,Cajón,Drawer
+UCR_S029,cajón,drawer
+UCR_S029,cajon,drawer
+UCR_S030,NA,NA
+UCR_S030,En el maletín.,In the briefcase.
+UCR_S030,Dentro de la mochila.,Inside the backpack.
+UCR_S030,En la mochila.,In the backpack.
+UCR_S031,NA,NA
+UCR_S031,en un bolso de maquilla cerrado,in a closed makeup bag
+UCR_S031,bolsa de maquillaje oscura,dark makeup bag
+UCR_S031,en un case de lentes,in a glasses case
+UCR_S031,bolso de lentes,glasses case
+UCR_S031,bolsa de lentes,glasses case
+UCR_S032,NA,NA
+UCR_S032,En un estuche de lentes.,In a glasses case.
+UCR_S032,En una gaveta.,In a drawer.
+UCR_S032,En una gaveta,In a drawer
+UCR_S033,NA,NA
+UCR_S033,en un cajón,in a drawer
+UCR_S033,mochila,backpack
+UCR_S034,NA,NA
+UCR_S034,un mueble,a piece of furniture
+UCR_S034,mueble,furniture
+UCR_S034,mesa,table
+UCR_S035,NA,NA
+UCR_S036,NA,NA
+UCR_S036,en una silla debajo de una mesa,on a chair under a table
+UCR_S036,en una bolsa negra debajo de una mesa,in a black bag under a table
+UCR_S036,en la guantera de un automóvil,in the glove compartment of a car
+UCR_S036,guantera de un automóvil,glove compartment of a car
+UCR_S036,dentro de un cajón en un mueble,inside a drawer in a piece of furniture
+UCR_S037,NA,NA
+UCR_S037,en la mochila,in the backpack
+UCR_S037,mochila,backpack
+UCR_S038,NA,NA
+UCR_S038,en la mesa de noche,on the nightstand
+UCR_S038,escritorio,desk
+UCR_S039,NA,NA
+UCR_S039,en mi mesa de noche en una cajita,on my nightstand in a little box
+UCR_S039,en una cajita,in a small box
+UCR_S040,envuelta en un paño en el baño,wrapped in a cloth in the bathroom
+UCR_S040,NA,NA
+UCR_S040,en un paño,on a cloth
+UCR_S040,en un paño en el piso,on a cloth on the floor
+UCR_S040,en un paño en elpiso,on a cloth on the floor
+UCR_S040,Dentro de un paño en el piso,Inside a cloth on the floor
+UCR_S040,en un maletín. voy a nadar,in a briefcase. I'm going to swim
+UCR_S040,en el npiso envuelto,on the floor wrapped

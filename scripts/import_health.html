@@ -2279,7 +2279,9 @@ vertical-align: -.125em;
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2$&quot;</span>)) <span class="sc">|&gt;</span> </span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(medication<span class="sc">:</span>disorder, as.logical),</span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">medication_type =</span> <span class="fu">as.character</span>(medication_type),</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">drugs =</span> na_lgl) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">drugs =</span> na_lgl,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>         ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>ℹ Using &quot;&#39;,&#39;&quot; as decimal and &quot;&#39;.&#39;&quot; as grouping mark. Use `read_delim()` for more control.</code></pre>
 </div>
@@ -2287,20 +2289,20 @@ vertical-align: -.125em;
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="vbujdzymcx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vbujdzymcx table {
+<div id="rwpakyprjl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rwpakyprjl table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#vbujdzymcx thead, #vbujdzymcx tbody, #vbujdzymcx tfoot, #vbujdzymcx tr, #vbujdzymcx td, #vbujdzymcx th {
+#rwpakyprjl thead, #rwpakyprjl tbody, #rwpakyprjl tfoot, #rwpakyprjl tr, #rwpakyprjl td, #rwpakyprjl th {
 border-style: none;
 }
-#vbujdzymcx p {
+#rwpakyprjl p {
 margin: 0;
 padding: 0;
 }
-#vbujdzymcx .gt_table {
+#rwpakyprjl .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2325,11 +2327,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#vbujdzymcx .gt_caption {
+#rwpakyprjl .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#vbujdzymcx .gt_title {
+#rwpakyprjl .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -2340,7 +2342,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#vbujdzymcx .gt_subtitle {
+#rwpakyprjl .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -2351,7 +2353,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#vbujdzymcx .gt_heading {
+#rwpakyprjl .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -2362,12 +2364,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#vbujdzymcx .gt_bottom_border {
+#rwpakyprjl .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#vbujdzymcx .gt_col_headings {
+#rwpakyprjl .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2381,7 +2383,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#vbujdzymcx .gt_col_heading {
+#rwpakyprjl .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2400,7 +2402,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#vbujdzymcx .gt_column_spanner_outer {
+#rwpakyprjl .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2411,13 +2413,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#vbujdzymcx .gt_column_spanner_outer:first-child {
+#rwpakyprjl .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#vbujdzymcx .gt_column_spanner_outer:last-child {
+#rwpakyprjl .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#vbujdzymcx .gt_column_spanner {
+#rwpakyprjl .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -2428,10 +2430,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#vbujdzymcx .gt_spanner_row {
+#rwpakyprjl .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#vbujdzymcx .gt_group_heading {
+#rwpakyprjl .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2456,7 +2458,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#vbujdzymcx .gt_empty_group_heading {
+#rwpakyprjl .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -2470,13 +2472,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#vbujdzymcx .gt_from_md > :first-child {
+#rwpakyprjl .gt_from_md > :first-child {
 margin-top: 0;
 }
-#vbujdzymcx .gt_from_md > :last-child {
+#rwpakyprjl .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#vbujdzymcx .gt_row {
+#rwpakyprjl .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2494,7 +2496,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#vbujdzymcx .gt_stub {
+#rwpakyprjl .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2506,7 +2508,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#vbujdzymcx .gt_stub_row_group {
+#rwpakyprjl .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2519,13 +2521,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#vbujdzymcx .gt_row_group_first td {
+#rwpakyprjl .gt_row_group_first td {
 border-top-width: 2px;
 }
-#vbujdzymcx .gt_row_group_first th {
+#rwpakyprjl .gt_row_group_first th {
 border-top-width: 2px;
 }
-#vbujdzymcx .gt_summary_row {
+#rwpakyprjl .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2534,14 +2536,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#vbujdzymcx .gt_first_summary_row {
+#rwpakyprjl .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#vbujdzymcx .gt_first_summary_row.thick {
+#rwpakyprjl .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#vbujdzymcx .gt_last_summary_row {
+#rwpakyprjl .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2550,7 +2552,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#vbujdzymcx .gt_grand_summary_row {
+#rwpakyprjl .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2559,7 +2561,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#vbujdzymcx .gt_first_grand_summary_row {
+#rwpakyprjl .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2568,7 +2570,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#vbujdzymcx .gt_last_grand_summary_row_top {
+#rwpakyprjl .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2577,10 +2579,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#vbujdzymcx .gt_striped {
+#rwpakyprjl .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#vbujdzymcx .gt_table_body {
+#rwpakyprjl .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2588,7 +2590,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#vbujdzymcx .gt_footnotes {
+#rwpakyprjl .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2601,7 +2603,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#vbujdzymcx .gt_footnote {
+#rwpakyprjl .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -2609,7 +2611,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#vbujdzymcx .gt_sourcenotes {
+#rwpakyprjl .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2622,64 +2624,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#vbujdzymcx .gt_sourcenote {
+#rwpakyprjl .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#vbujdzymcx .gt_left {
+#rwpakyprjl .gt_left {
 text-align: left;
 }
-#vbujdzymcx .gt_center {
+#rwpakyprjl .gt_center {
 text-align: center;
 }
-#vbujdzymcx .gt_right {
+#rwpakyprjl .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#vbujdzymcx .gt_font_normal {
+#rwpakyprjl .gt_font_normal {
 font-weight: normal;
 }
-#vbujdzymcx .gt_font_bold {
+#rwpakyprjl .gt_font_bold {
 font-weight: bold;
 }
-#vbujdzymcx .gt_font_italic {
+#rwpakyprjl .gt_font_italic {
 font-style: italic;
 }
-#vbujdzymcx .gt_super {
+#rwpakyprjl .gt_super {
 font-size: 65%;
 }
-#vbujdzymcx .gt_footnote_marks {
+#rwpakyprjl .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#vbujdzymcx .gt_asterisk {
+#rwpakyprjl .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#vbujdzymcx .gt_indent_1 {
+#rwpakyprjl .gt_indent_1 {
 text-indent: 5px;
 }
-#vbujdzymcx .gt_indent_2 {
+#rwpakyprjl .gt_indent_2 {
 text-indent: 10px;
 }
-#vbujdzymcx .gt_indent_3 {
+#rwpakyprjl .gt_indent_3 {
 text-indent: 15px;
 }
-#vbujdzymcx .gt_indent_4 {
+#rwpakyprjl .gt_indent_4 {
 text-indent: 20px;
 }
-#vbujdzymcx .gt_indent_5 {
+#rwpakyprjl .gt_indent_5 {
 text-indent: 25px;
 }
-#vbujdzymcx .katex-display {
+#rwpakyprjl .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#vbujdzymcx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rwpakyprjl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -2813,20 +2815,20 @@ height: 0px !important;
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table_health</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fbsfdkoafy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fbsfdkoafy table {
+<div id="rkzrvpzzwc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rkzrvpzzwc table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#fbsfdkoafy thead, #fbsfdkoafy tbody, #fbsfdkoafy tfoot, #fbsfdkoafy tr, #fbsfdkoafy td, #fbsfdkoafy th {
+#rkzrvpzzwc thead, #rkzrvpzzwc tbody, #rkzrvpzzwc tfoot, #rkzrvpzzwc tr, #rkzrvpzzwc td, #rkzrvpzzwc th {
 border-style: none;
 }
-#fbsfdkoafy p {
+#rkzrvpzzwc p {
 margin: 0;
 padding: 0;
 }
-#fbsfdkoafy .gt_table {
+#rkzrvpzzwc .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2851,11 +2853,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_caption {
+#rkzrvpzzwc .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#fbsfdkoafy .gt_title {
+#rkzrvpzzwc .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -2866,7 +2868,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#fbsfdkoafy .gt_subtitle {
+#rkzrvpzzwc .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -2877,7 +2879,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#fbsfdkoafy .gt_heading {
+#rkzrvpzzwc .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -2888,12 +2890,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_bottom_border {
+#rkzrvpzzwc .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_col_headings {
+#rkzrvpzzwc .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2907,7 +2909,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_col_heading {
+#rkzrvpzzwc .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2926,7 +2928,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#fbsfdkoafy .gt_column_spanner_outer {
+#rkzrvpzzwc .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2937,13 +2939,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#fbsfdkoafy .gt_column_spanner_outer:first-child {
+#rkzrvpzzwc .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#fbsfdkoafy .gt_column_spanner_outer:last-child {
+#rkzrvpzzwc .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#fbsfdkoafy .gt_column_spanner {
+#rkzrvpzzwc .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -2954,10 +2956,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#fbsfdkoafy .gt_spanner_row {
+#rkzrvpzzwc .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#fbsfdkoafy .gt_group_heading {
+#rkzrvpzzwc .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2982,7 +2984,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#fbsfdkoafy .gt_empty_group_heading {
+#rkzrvpzzwc .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -2996,13 +2998,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#fbsfdkoafy .gt_from_md > :first-child {
+#rkzrvpzzwc .gt_from_md > :first-child {
 margin-top: 0;
 }
-#fbsfdkoafy .gt_from_md > :last-child {
+#rkzrvpzzwc .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#fbsfdkoafy .gt_row {
+#rkzrvpzzwc .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3020,7 +3022,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#fbsfdkoafy .gt_stub {
+#rkzrvpzzwc .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3032,7 +3034,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fbsfdkoafy .gt_stub_row_group {
+#rkzrvpzzwc .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3045,13 +3047,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#fbsfdkoafy .gt_row_group_first td {
+#rkzrvpzzwc .gt_row_group_first td {
 border-top-width: 2px;
 }
-#fbsfdkoafy .gt_row_group_first th {
+#rkzrvpzzwc .gt_row_group_first th {
 border-top-width: 2px;
 }
-#fbsfdkoafy .gt_summary_row {
+#rkzrvpzzwc .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3060,14 +3062,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fbsfdkoafy .gt_first_summary_row {
+#rkzrvpzzwc .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_first_summary_row.thick {
+#rkzrvpzzwc .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#fbsfdkoafy .gt_last_summary_row {
+#rkzrvpzzwc .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3076,7 +3078,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_grand_summary_row {
+#rkzrvpzzwc .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3085,7 +3087,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fbsfdkoafy .gt_first_grand_summary_row {
+#rkzrvpzzwc .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3094,7 +3096,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_last_grand_summary_row_top {
+#rkzrvpzzwc .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3103,10 +3105,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_striped {
+#rkzrvpzzwc .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#fbsfdkoafy .gt_table_body {
+#rkzrvpzzwc .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3114,7 +3116,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_footnotes {
+#rkzrvpzzwc .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3127,7 +3129,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_footnote {
+#rkzrvpzzwc .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -3135,7 +3137,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fbsfdkoafy .gt_sourcenotes {
+#rkzrvpzzwc .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3148,64 +3150,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#fbsfdkoafy .gt_sourcenote {
+#rkzrvpzzwc .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#fbsfdkoafy .gt_left {
+#rkzrvpzzwc .gt_left {
 text-align: left;
 }
-#fbsfdkoafy .gt_center {
+#rkzrvpzzwc .gt_center {
 text-align: center;
 }
-#fbsfdkoafy .gt_right {
+#rkzrvpzzwc .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#fbsfdkoafy .gt_font_normal {
+#rkzrvpzzwc .gt_font_normal {
 font-weight: normal;
 }
-#fbsfdkoafy .gt_font_bold {
+#rkzrvpzzwc .gt_font_bold {
 font-weight: bold;
 }
-#fbsfdkoafy .gt_font_italic {
+#rkzrvpzzwc .gt_font_italic {
 font-style: italic;
 }
-#fbsfdkoafy .gt_super {
+#rkzrvpzzwc .gt_super {
 font-size: 65%;
 }
-#fbsfdkoafy .gt_footnote_marks {
+#rkzrvpzzwc .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#fbsfdkoafy .gt_asterisk {
+#rkzrvpzzwc .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#fbsfdkoafy .gt_indent_1 {
+#rkzrvpzzwc .gt_indent_1 {
 text-indent: 5px;
 }
-#fbsfdkoafy .gt_indent_2 {
+#rkzrvpzzwc .gt_indent_2 {
 text-indent: 10px;
 }
-#fbsfdkoafy .gt_indent_3 {
+#rkzrvpzzwc .gt_indent_3 {
 text-indent: 15px;
 }
-#fbsfdkoafy .gt_indent_4 {
+#rkzrvpzzwc .gt_indent_4 {
 text-indent: 20px;
 }
-#fbsfdkoafy .gt_indent_5 {
+#rkzrvpzzwc .gt_indent_5 {
 text-indent: 25px;
 }
-#fbsfdkoafy .katex-display {
+#rkzrvpzzwc .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#fbsfdkoafy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rkzrvpzzwc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -3328,7 +3330,7 @@ height: 0px !important;
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_health</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_health.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>file:////var/folders/9p/326_k3kx43qbn_cyl1rqfhb00000gn/T//Rtmpk9NqV2/file16bdd1d45e5a4.html screenshot completed</code></pre>
+<pre><code>file:////var/folders/9p/326_k3kx43qbn_cyl1rqfhb00000gn/T//Rtmp3XicYe/filec323a3e055d.html screenshot completed</code></pre>
 </div>
 </div>
 <section id="export" class="level3">
@@ -3338,7 +3340,8 @@ height: 0px !important;
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>health <span class="ot">&lt;-</span> data</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/&quot;</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(health, <span class="at">file =</span> <span class="st">&quot;../data/imported/health.RData&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(health, <span class="at">file =</span> <span class="st">&quot;../data/imported/health.RData&quot;</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">&quot;../data/imported/health.RData&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <!-- -->
 
@@ -3855,48 +3858,51 @@ height: 0px !important;
 <span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2$&quot;</span>)) <span class="sc">|&gt;</span> </span>
 <span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(medication<span class="sc">:</span>disorder, as.logical),</span>
 <span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>         <span class="at">medication_type =</span> <span class="fu">as.character</span>(medication_type),</span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>         <span class="at">drugs =</span> na_lgl) </span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns</span></span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
-<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
-<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
-<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
-<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
-<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
-<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
-<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
-<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span>
-<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder variables</span></span>
-<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
-<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
-<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(<span class="fu">any_of</span>(codebook<span class="sc">$</span><span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>))</span>
-<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summarize results</span></span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>         <span class="at">drugs =</span> na_lgl,</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>)</span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>         ) </span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns</span></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder variables</span></span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(<span class="fu">any_of</span>(codebook<span class="sc">$</span><span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>))</span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a><span class="fu">table_health</span>(data)</span>
-<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_health</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_health.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span>
-<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summarize results</span></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a><span class="fu">table_health</span>(data)</span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_health</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_health.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
-<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a>health <span class="ot">&lt;-</span> data</span>
-<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/&quot;</span></span>
-<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(health, <span class="at">file =</span> <span class="st">&quot;../data/imported/health.RData&quot;</span>)</span>
-<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a>health <span class="ot">&lt;-</span> data</span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/&quot;</span></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(health, <span class="at">file =</span> <span class="st">&quot;../data/imported/health.RData&quot;</span>)</span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">&quot;../data/imported/health.RData&quot;</span>)</span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

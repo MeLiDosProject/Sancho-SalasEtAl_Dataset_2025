@@ -46,15 +46,27 @@ c("labeling",
 #collect codebook
 codebook <- prepare_codebook("MeLiDosWearLog_DataDictionary_2024-10-16.csv")
 #collect files
-files <- filefinder("wearlog", continuous = TRUE, individual = TRUE)
+files <- filefinder(c("wearlog"), continuous = TRUE, individual = TRUE)
+files <- c(files, 
+           filefinder(c("wearlog_lanyard"), continuous = TRUE, individual = TRUE)
+)
 #import files
 data <- 
-  read_csv(files, show_col_types = FALSE) |> 
+  read_csv(files[1:6], show_col_types = FALSE) |> 
   drop_na(redcap_repeat_instance) |> 
   mutate(
          record_id = str_replace(record_id, "UCR", "UCR_")
          ) |> 
     rename_with(\(x) str_remove(x, "_v2$"))
+data2 <- 
+  read_csv(files[7:39], show_col_types = FALSE) |> 
+  drop_na(redcap_repeat_instance) |> 
+  mutate(
+         record_id = str_replace(record_id, "UCR", "UCR_")
+         ) |> 
+    rename_with(\(x) str_remove(x, "_v2$"))
+data <- data |> bind_rows(data2)
+rm(data2)
 #check column types
 coltype_check <- coltype_checker(codebook, data)
 coltype_check$details |> gt()
@@ -143,12 +155,12 @@ data <- data |> wearlog_plausibility()
 ```{r}
 data_site <- 
 data |> 
-  filter(event %in% c("site_leave", "site_return"), is.plausible) |> 
+  filter(event %in% c("site_leave", "site_return")) |> 
   mutate(.by = record_id,
          duration = difftime(lead(start), start, unit = "mins"),
          end = start + duration,
          .after = event) |> 
-  filter(event == "site_leave", duration != 0)
+  filter(event == "site_leave", duration != 0, is.plausible)
 ```
 
 ### Wear
@@ -156,12 +168,12 @@ data |>
 ```{r}
 data_wear <-
 data |> 
-  filter(event %in% c("on", "off", "sleep"), is.plausible | event == "on") |> 
+  filter(event %in% c("on", "off", "sleep")) |> 
   mutate(.by = record_id,
          duration = difftime(lead(start), start, unit = "mins"),
          end = start + duration,
          .after = event) |> 
-  filter(event %in% c("off", "sleep"), duration != 0)
+  filter(event %in% c("off", "sleep"), duration != 0, is.plausible)
 ```
 
 ### Join
@@ -274,4 +286,5 @@ wearlog <- data
 path <- "../data/imported/continuous/"
 if(!dir.exists(path)) dir.create(path, recursive = TRUE)
 save(wearlog, file = "../data/imported/continuous/wearlog.RData")
+# load(file = "../data/imported/continuous/wearlog.RData")
 ```

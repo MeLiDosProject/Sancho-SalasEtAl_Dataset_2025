@@ -52,7 +52,9 @@ data <-
   read_csv(files, show_col_types = FALSE) |> 
   drop_na(redcap_repeat_instance) |> 
   rename_with(\(x) str_remove_all(x,"_v2")) |> 
-  rename(leba_f3_14 = leba_f3_13_v3)
+  rename(leba_f3_14 = leba_f3_13_v3) |> 
+  mutate(
+    record_id = str_replace(record_id, "UCR", "UCR_"))
 #check column types
 coltype_check <- coltype_checker(codebook, data)
 coltype_check$details |> gt()
@@ -142,4 +144,5 @@ leba <- data
 path <- "../data/imported/"
 if(!dir.exists(path)) dir.create(path, recursive = TRUE)
 save(leba, file = "../data/imported/leba.RData")
+load(file = "../data/imported/leba.RData")
 ```
