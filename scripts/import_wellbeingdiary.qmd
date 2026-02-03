@@ -48,7 +48,7 @@ codebook <- prepare_codebook("MeLiDosEveningDiaries_DataDictionary_2024-10-16.cs
 #collect files
 files <- filefinder("wellbeingdiary", continuous = TRUE, individual = TRUE)
 #import files
-data <- read_csv(files[c(1:17,21:39)], show_col_types = FALSE) |> 
+data <- read_csv(files, show_col_types = FALSE) |> 
   rename_with(\(x) str_remove(x, "_v2$")) |> 
     drop_na(introduction_wellbeing) |> 
     mutate(
