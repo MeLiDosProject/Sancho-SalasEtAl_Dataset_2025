@@ -1,0 +1,342 @@
+record_id,start,activity_desc_english,activity_desc
+UCR_S001,2025-06-20T17:00:00Z,Outdoor sports,Deporte exteriores
+UCR_S001,2025-06-22T00:00:00Z,Leisure in semi-outdoor spaces,Ocio en semi-exteriores
+UCR_S003,2025-06-17T01:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S003,2025-06-17T02:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S004,2025-06-28T01:00:00Z,"Time spent indoors but not at home nor at work, office, or similar place.","Tiempo en interiores pero no en casa ni horario laboral, oficina o similar."
+UCR_S005,2025-06-23T21:00:00Z,I went from being in an indoor meeting to walking to a café to have lunch.,Pasé de estar en una reunión en interiores a trasladarme a pie a una soda para almorzar.
+UCR_S005,2025-06-25T00:00:00Z,I went to the supermarket.,Fui al supermercado.
+UCR_S005,2025-06-26T20:00:00Z,Awake at home.,Despierto en casa.
+UCR_S005,2025-06-27T01:00:00Z,Awake at home.,Despierto en casa.
+UCR_S005,2025-06-27T02:00:00Z,Awake at home.,Despierto en casa.
+UCR_S005,2025-06-28T02:00:00Z,Eating at a small market.,Comiendo en un mercadito.
+UCR_S005,2025-06-28T18:00:00Z,Shopping,Haciendo compras.
+UCR_S005,2025-06-28T19:00:00Z,Shopping.,Haciendo compras.
+UCR_S005,2025-06-28T20:00:00Z,Shopping.,Haciendo compras.
+UCR_S005,2025-06-28T22:00:00Z,Shopping.,Haciendo compras.
+UCR_S005,2025-06-28T23:00:00Z,Eating in cafeteria.,Comiendo en cafetería.
+UCR_S005,2025-06-29T22:00:00Z,At church.,En la iglesia.
+UCR_S007,2025-07-01T15:00:00Z,Walk,Caminar.
+UCR_S007,2025-07-01T16:00:00Z,Walk.,Caminar.
+UCR_S007,2025-07-03T01:00:00Z,Store.,Tienda.
+UCR_S007,2025-07-03T02:00:00Z,Store.,Tienda.
+UCR_S007,2025-07-03T03:00:00Z,Restaurant.,Restaurante.
+UCR_S007,2025-07-04T01:00:00Z,Restaurant.,Restaurante.
+UCR_S007,2025-07-04T02:00:00Z,Restaurant.,Restaurante.
+UCR_S007,2025-07-04T03:00:00Z,Restaurant.,Restaurante.
+UCR_S008,2025-06-30T23:00:00Z,Indoor sports.,Deporte interno.
+UCR_S008,2025-07-01T13:00:00Z,Gym.,Gym.
+UCR_S008,2025-07-02T13:00:00Z,Gym.,Gym.
+UCR_S008,2025-07-03T01:00:00Z,Restaurant.,Restaurante.
+UCR_S008,2025-07-03T14:00:00Z,Gym.,Gym.
+UCR_S008,2025-07-03T20:00:00Z,Municipality,Municipalidad
+UCR_S008,2025-07-05T02:00:00Z,Restaurant.,Restaurante.
+UCR_S008,2025-07-05T13:00:00Z,Gym.,Gym.
+UCR_S008,2025-07-05T14:00:00Z,Gym,Gym.
+UCR_S008,2025-07-05T19:00:00Z,Restaurant.,Restaurante.
+UCR_S008,2025-07-05T20:00:00Z,Restaurant,Restaurante.
+UCR_S009,2024-06-30T20:00:00Z,Induction.,Inducción.
+UCR_S009,2024-07-02T00:00:00Z,Attendance at academic activity (public defense),Presencia en actividad académica (defensa pública)
+UCR_S009,2024-07-02T01:00:00Z,Attendance at academic activity (public defense),Presencia en actividad académica (defensa pública)
+UCR_S009,2024-07-02T02:00:00Z,Presence at academic activity (public defense) + transportation by motorcycle,Presencia en actividad académica (defensa pública) + transporte en moto
+UCR_S010,2025-07-11T20:00:00Z,Bank,Banco.
+UCR_S011,2025-07-08T00:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S011,2025-07-09T22:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S011,2025-07-09T23:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S011,2025-07-10T00:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S011,2025-07-10T01:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S014,2025-07-14T22:00:00Z,On the way home.,Camino a la casa.
+UCR_S015,2025-07-16T01:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S018,2025-07-23T01:00:00Z,Watch series.,Ver series.
+UCR_S018,2025-07-23T02:00:00Z,Watch series.,Ver series.
+UCR_S018,2025-07-23T03:00:00Z,Watch series.,Ver series.
+UCR_S018,2025-07-24T02:00:00Z,Videogames / Revit.,Videojuegos / Revit.
+UCR_S018,2025-07-24T03:00:00Z,Videogames / Revit.,Videojuegos / Revit.
+UCR_S018,2025-07-25T16:00:00Z,PC,PC.
+UCR_S018,2025-07-25T17:00:00Z,Using a PC,PC.
+UCR_S018,2025-07-25T18:00:00Z,Medical appointment.,Cita médica.
+UCR_S020,2025-07-22T16:00:00Z,Indoor sports,Deporte en interior.
+UCR_S020,2025-07-23T15:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S020,2025-07-23T16:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S020,2025-07-23T17:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S020,2025-07-24T00:00:00Z,Shopping mall (interior).,Centro comercial (interior).
+UCR_S020,2025-07-24T16:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S020,2025-07-24T17:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S020,2025-07-26T16:00:00Z,Restaurant (indoor).,Restaurante (interior).
+UCR_S020,2025-07-27T16:00:00Z,Indoor space outside home.,Espacio interno fuera de casa.
+UCR_S020,2025-07-27T18:00:00Z,Indoor space outside home.,Espacio interno fuera de casa.
+UCR_S020,2025-07-27T19:00:00Z,Indoor space outside the home.,Espacio interno fuera de casa.
+UCR_S020,2025-07-27T20:00:00Z,Indoor space outside the home.,Espacio interno fuera de casa.
+UCR_S020,2025-07-27T23:00:00Z,Indoors outside the home.,Espacio interno fuera de casa.
+UCR_S021,2025-07-21T23:00:00Z,Auditorium (indoor),Auditorio (interior)
+UCR_S021,2025-07-22T00:00:00Z,Auditorium (interior),Auditorio (interior)
+UCR_S021,2025-07-22T01:00:00Z,Auditorium (indoor),Auditorio (interior)
+UCR_S021,2025-07-22T16:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-22T17:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-22T18:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-22T20:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-22T21:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-22T22:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-23T01:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-23T02:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-26T00:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-26T01:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-26T02:00:00Z,Normal indoor space.,Espacio interior normal.
+UCR_S021,2025-07-27T18:00:00Z,Shopping mall (indoors).,Centro comercial (interior).
+UCR_S021,2025-07-27T19:00:00Z,Shopping mall (indoors).,Centro comercial (interior).
+UCR_S021,2025-07-27T20:00:00Z,Shopping mall (indoors).,Centro comercial (interior).
+UCR_S022,2025-07-29T00:00:00Z,Indoor neighborhood meeting.,Reunión de vecinos en interiores.
+UCR_S022,2025-07-29T01:00:00Z,Indoor neighborhood meeting.,Reunión de vecinos en interiores.
+UCR_S022,2025-07-31T01:00:00Z,Cardio dance.,Cardio baile.
+UCR_S022,2025-07-31T18:00:00Z,In an enclosed room at a social activity.,En un salón cerrado en una actividad social.
+UCR_S022,2025-07-31T19:00:00Z,In an enclosed room at a social event.,En un salón cerrado en una actividad social.
+UCR_S022,2025-07-31T20:00:00Z,In an enclosed room at a social event.,En un salón cerrado en una actividad social.
+UCR_S022,2025-07-31T21:00:00Z,In an enclosed room at a social event.,En un salón cerrado en una actividad social.
+UCR_S022,2025-08-02T18:00:00Z,Swimming and time in the pool.,Natación y tiempo en la piscina.
+UCR_S022,2025-08-02T19:00:00Z,Swimming and time in the pool.,Natación y tiempo en la piscina.
+UCR_S022,2025-08-02T20:00:00Z,Swimming and time in the pool.,Natación y tiempo en la piscina.
+UCR_S022,2025-08-03T17:00:00Z,In supermarket and with family/friends.,En supermercado y en cosas de familia / amigos.
+UCR_S022,2025-08-03T18:00:00Z,At the supermarket and with family / friends.,En supermercado y en cosas de familia / amigos.
+UCR_S022,2025-08-03T19:00:00Z,At the supermarket and with family/friends.,En supermercado y en cosas de familia / amigos.
+UCR_S022,2025-08-03T20:00:00Z,At the supermarket and with family / friends.,En supermercado y en cosas de familia / amigos.
+UCR_S022,2025-08-03T21:00:00Z,At the supermarket and with family/friends matters.,En supermercado y en cosas de familia / amigos.
+UCR_S022,2025-08-03T22:00:00Z,At the supermarket and with family / friends.,En supermercado y en cosas de familia / amigos.
+UCR_S022,2025-08-03T23:00:00Z,At the supermarket and spending time with family/friends.,En supermercado y en cosas de familia / amigos.
+UCR_S025,2025-08-06T01:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S025,2025-08-06T02:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S025,2025-08-07T01:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S025,2025-08-07T02:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S025,2025-08-07T23:00:00Z,Clinic waiting room.,Sala de espera clínica.
+UCR_S025,2025-08-08T01:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S025,2025-08-08T02:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S025,2025-08-09T00:00:00Z,Social activity.,Actividad social.
+UCR_S025,2025-08-09T01:00:00Z,Social activity.,Actividad social.
+UCR_S025,2025-08-09T02:00:00Z,Social activity.,Actividad social.
+UCR_S025,2025-08-09T03:00:00Z,Social activity.,Actividad social.
+UCR_S025,2025-08-09T04:00:00Z,Social activity.,Actividad social.
+UCR_S025,2025-08-09T05:00:00Z,Social activity.,Actividad social.
+UCR_S025,2025-08-10T02:00:00Z,Restaurant.,Restaurante.
+UCR_S026,2025-08-04T21:00:00Z,Visiting a client.,Visitando un cliente.
+UCR_S026,2025-08-04T22:00:00Z,Dance rehearsal in my room.,Ensayo danza en mi cuarto.
+UCR_S026,2025-08-04T23:00:00Z,Cooking at home.,Cocinando en casa.
+UCR_S026,2025-08-05T00:00:00Z,Studying / taking an online course.,Estudiando / clases curso en línea.
+UCR_S026,2025-08-05T01:00:00Z,Studying / online course classes.,Estudiando / clases curso en línea.
+UCR_S026,2025-08-05T02:00:00Z,Cooking at home.,Cocinando en casa.
+UCR_S026,2025-08-05T18:00:00Z,Lunch indoors.,Almuerzo en interior.
+UCR_S026,2025-08-06T01:00:00Z,Dinner indoors.,Cena en interior.
+UCR_S026,2025-08-06T10:00:00Z,I stayed in bed looking at my phone.,Me quedé en cama viendo mi teléfono.
+UCR_S026,2025-08-06T11:00:00Z,I took a shower.,Me bañé.
+UCR_S026,2025-08-06T14:00:00Z,Carpentry workshop in Coronado (the participant draws a picture of a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T15:00:00Z,Carpentry workshop in Coronado (the participant draws a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T16:00:00Z,Cabinetmaking workshop in Coronado (the participant makes a drawing of a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T17:00:00Z,Cabinetmaking workshop in Coronado (the participant draws a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T18:00:00Z,Carpentry workshop in Coronado (the participant makes a drawing of a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T19:00:00Z,Cabinetry workshop in Coronado (the participant draws a picture of a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T20:00:00Z,Cabinetmaking workshop in Coronado (the participant draws a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T21:00:00Z,Carpentry workshop in Coronado (the participant is drawing a cloud with rain).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-06T22:00:00Z,Cabinetmaking workshop in Coronado (the participant makes a drawing of a rain cloud).,Taller ebanistería en Coronado (la persona participante hace un dibujo de una nube con lluvia).
+UCR_S026,2025-08-08T10:00:00Z,My parents' house.,Casa de mis papás.
+UCR_S026,2025-08-08T13:00:00Z,Work in my parents' garage.,Trabajo en la cochera de mis papás.
+UCR_S026,2025-08-08T14:00:00Z,Work in my parents' garage.,Trabajo en la cochera de mis papás.
+UCR_S026,2025-08-08T15:00:00Z,Work in my parents' garage.,Trabajo en la cochera de mis papás.
+UCR_S026,2025-08-08T16:00:00Z,Work in my parents' garage.,Trabajo en la cochera de mis papás.
+UCR_S026,2025-08-08T17:00:00Z,Work in my parent's garage.,Trabajo en la cochera de mis papás.
+UCR_S026,2025-08-08T18:00:00Z,Working in my parents' garage.,Trabajo en la cochera de mis papás.
+UCR_S026,2025-08-08T19:00:00Z,Installation of furniture at the client's house.,Instalación de mueble en la casa del cliente.
+UCR_S026,2025-08-08T20:00:00Z,Installation of furniture at the customer's house.,Instalación de mueble en la casa del cliente.
+UCR_S026,2025-08-08T21:00:00Z,Installation of furniture at the client's house.,Instalación de mueble en la casa del cliente.
+UCR_S026,2025-08-08T22:00:00Z,Work in my parents' garage.,Trabajo en la cochera de mis papás.
+UCR_S026,2025-08-08T23:00:00Z,Having a beer in the yard.,Tomando una cerveza en el patio.
+UCR_S026,2025-08-09T12:00:00Z,I went to the fair.,Fui a la feria.
+UCR_S026,2025-08-09T13:00:00Z,I went to the fair.,Fui a la feria.
+UCR_S026,2025-08-09T15:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-09T16:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-09T17:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-09T18:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-09T19:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-09T20:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-09T21:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-09T22:00:00Z,Working assembling furniture in the garage.,Trabajando armando muebles en la cochera.
+UCR_S026,2025-08-10T21:00:00Z,Working assembling furniture from home.,Trabajando armando muebles desde casa.
+UCR_S026,2025-08-10T22:00:00Z,Working from home assembling furniture.,Trabajando armando muebles desde casa.
+UCR_S026,2025-08-10T23:00:00Z,Working assembling furniture from home.,Trabajando armando muebles desde casa.
+UCR_S026,2025-08-11T00:00:00Z,Working assembling furniture from home.,Trabajando armando muebles desde casa.
+UCR_S026,2025-08-11T01:00:00Z,Working assembling furniture from home.,Trabajando armando muebles desde casa.
+UCR_S026,2025-08-11T02:00:00Z,Working assembling furniture from home.,Trabajando armando muebles desde casa.
+UCR_S026,2025-08-11T03:00:00Z,Working assembling furniture from home.,Trabajando armando muebles desde casa.
+UCR_S026,2025-08-11T04:00:00Z,Working assembling furniture from home.,Trabajando armando muebles desde casa.
+UCR_S027,2025-08-06T01:00:00Z,Supermarket.,Supermercado.
+UCR_S027,2025-08-07T18:00:00Z,Walking.,Caminando.
+UCR_S028,2025-08-12T14:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S029,2025-08-13T12:00:00Z,Outdoor sports.,Deporte en exterior.
+UCR_S029,2025-08-13T13:00:00Z,Church.,Iglesia.
+UCR_S029,2025-08-14T12:00:00Z,Outdoor sports.,Deporte en exterior.
+UCR_S029,2025-08-16T15:00:00Z,Restaurant.,Restaurante.
+UCR_S029,2025-08-16T23:00:00Z,Restaurant.,Restaurante.
+UCR_S029,2025-08-17T21:00:00Z,Restaurant.,Restaurante.
+UCR_S029,2025-08-18T00:00:00Z,Church.,Iglesia.
+UCR_S031,2025-08-18T13:00:00Z,Play with cat.,Jugar con gato.
+UCR_S031,2025-08-18T14:00:00Z,Play with cat.,Jugar con gato.
+UCR_S031,2025-08-18T15:00:00Z,Resting inside the house.,Descansar dentro de la casa.
+UCR_S031,2025-08-18T16:00:00Z,Little market.,Mercadito.
+UCR_S031,2025-08-18T17:00:00Z,Internal light study.,Estudio de luz interno.
+UCR_S031,2025-08-18T23:00:00Z,Wasting time on my phone.,Perder el tiempo en el celular.
+UCR_S031,2025-08-19T00:00:00Z,Play with the cat + waste time on the cell phone.,Jugar con el gato + perder el tiempo con el celular.
+UCR_S031,2025-08-19T01:00:00Z,"Screens, look at Instagram.",Pantallas ver insta.
+UCR_S031,2025-08-19T13:00:00Z,"Watch screens, YouTube.","Ver pantallas, YouTube."
+UCR_S031,2025-08-19T14:00:00Z,Indoor exercise.,Ejercicio en interiores.
+UCR_S031,2025-08-19T18:00:00Z,Lunch indoors and watching a screen.,Almuerzo en interiores y ver pantalla.
+UCR_S031,2025-08-20T00:00:00Z,Look at screen for distraction.,Ver pantalla distracción.
+UCR_S031,2025-08-20T01:00:00Z,Screen viewing distraction.,Ver pantalla distracción.
+UCR_S031,2025-08-20T03:00:00Z,Looked at a screen before sleeping.,Ver pantalla antes de dormir.
+UCR_S031,2025-08-20T12:00:00Z,Take the cat to the garden.,Sacar al gato al jardín.
+UCR_S031,2025-08-20T13:00:00Z,"Watch screens, YouTube.","Ver pantallas, YouTube."
+UCR_S031,2025-08-21T00:00:00Z,Watch computer to distract myself + play with the cat.,Ver computadora para distraerme + jugar con el gato.
+UCR_S031,2025-08-21T01:00:00Z,Watch computer for distraction + play with the cat.,Ver computadora para distraerme + jugar con el gato.
+UCR_S031,2025-08-21T02:00:00Z,Watch computer to distract myself + play with the cat.,Ver computadora para distraerme + jugar con el gato.
+UCR_S031,2025-08-21T03:00:00Z,Watch computer to distract myself + play with the cat.,Ver computadora para distraerme + jugar con el gato.
+UCR_S031,2025-08-21T13:00:00Z,Look at a screen.,Ver pantalla.
+UCR_S031,2025-08-21T14:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-21T20:00:00Z,Look at screen and nap.,Ver pantalla y siesta.
+UCR_S031,2025-08-21T23:00:00Z,Look at a screen and play with the cat.,Ver pantalla y jugar con el gato.
+UCR_S031,2025-08-22T00:00:00Z,Look at a screen and play with the cat.,Ver pantalla y jugar con el gato.
+UCR_S031,2025-08-22T01:00:00Z,Watch screen and play with the cat.,Ver pantalla y jugar con el gato.
+UCR_S031,2025-08-22T02:00:00Z,Look at a screen and play with the cat.,Ver pantalla y jugar con el gato.
+UCR_S031,2025-08-22T03:00:00Z,Watch a screen and play with the cat.,Ver pantalla y jugar con el gato.
+UCR_S031,2025-08-22T13:00:00Z,Look at cell phone screen.,Ver pantalla del celular.
+UCR_S031,2025-08-22T19:00:00Z,Look at the phone screen.,Ver pantalla del celular.
+UCR_S031,2025-08-22T20:00:00Z,Look at the cell phone screen.,Ver pantalla del celular.
+UCR_S031,2025-08-22T21:00:00Z,Look at cellphone screen.,Ver pantalla del celular.
+UCR_S031,2025-08-22T22:00:00Z,Look at phone screen.,Ver pantalla del celular.
+UCR_S031,2025-08-22T23:00:00Z,Go out to eat in an indoor space with windows.,Salir a comer en espacio interior con ventanas.
+UCR_S031,2025-08-23T00:00:00Z,Eat out in an indoor space with windows.,Salir a comer en espacio interior con ventanas.
+UCR_S031,2025-08-23T01:00:00Z,Play with the cat.,Jugar con el gato.
+UCR_S031,2025-08-23T02:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-23T13:00:00Z,Play with Valentino (the cat).,Jugar con Valentino (el gato).
+UCR_S031,2025-08-23T14:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-23T15:00:00Z,View screen.,Ver pantalla.
+UCR_S031,2025-08-23T16:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-23T19:00:00Z,Go out to eat.,Salir a comer.
+UCR_S031,2025-08-23T20:00:00Z,Go out to eat.,Salir a comer.
+UCR_S031,2025-08-23T21:00:00Z,Go out to eat.,Salir a comer.
+UCR_S031,2025-08-23T23:00:00Z,Look at a screen.,Ver pantalla.
+UCR_S031,2025-08-24T00:00:00Z,Clean,Limpiar.
+UCR_S031,2025-08-24T01:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-24T02:00:00Z,"Take a shower, eat, play with the cat.","Bañarme, comer, jugar con el gato."
+UCR_S031,2025-08-24T03:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-24T12:00:00Z,Play with the cat.,Jugar con el gato.
+UCR_S031,2025-08-24T13:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-24T14:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-24T15:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-24T16:00:00Z,View screen.,Ver pantalla.
+UCR_S031,2025-08-24T17:00:00Z,Rest,Descanso
+UCR_S031,2025-08-24T18:00:00Z,Rest,Descanso
+UCR_S031,2025-08-24T19:00:00Z,Clean.,Limpiar.
+UCR_S031,2025-08-24T20:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-24T21:00:00Z,Look at a screen.,Ver pantalla.
+UCR_S031,2025-08-24T22:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-24T23:00:00Z,Look at screen.,Ver pantalla.
+UCR_S031,2025-08-25T00:00:00Z,Look at a screen.,Ver pantalla.
+UCR_S031,2025-08-25T01:00:00Z,Play with the cat.,Jugar con el gato.
+UCR_S031,2025-08-25T02:00:00Z,Looking at a screen.,Ver pantalla.
+UCR_S031,2025-08-25T03:00:00Z,Look at screen.,Ver pantalla.
+UCR_S032,2025-08-18T12:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S032,2025-08-18T13:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S032,2025-08-19T12:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S032,2025-08-19T17:00:00Z,Restaurant.,Restaurante.
+UCR_S032,2025-08-21T12:00:00Z,Gym (indoor sports),Gimnasio (deporte en interiores)
+UCR_S032,2025-08-22T12:00:00Z,Gym (indoor sports),Gimnasio (deporte en interiores)
+UCR_S032,2025-08-22T13:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S032,2025-08-24T18:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S033,2025-08-18T22:00:00Z,Play piano.,Tocar piano.
+UCR_S033,2025-08-19T03:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-19T04:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-19T14:00:00Z,Walking.,Caminar.
+UCR_S033,2025-08-19T15:00:00Z,Physical work outside.,Trabajo físico en exterior.
+UCR_S033,2025-08-19T16:00:00Z,Physical work outdoors.,Trabajo físico en exterior.
+UCR_S033,2025-08-19T17:00:00Z,Physical work outdoors.,Trabajo físico en exterior.
+UCR_S033,2025-08-20T16:00:00Z,Play piano.,Tocar piano.
+UCR_S033,2025-08-20T17:00:00Z,Watch series.,Ver series.
+UCR_S033,2025-08-20T18:00:00Z,Exercise.,Ejercicio.
+UCR_S033,2025-08-21T02:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-21T03:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-21T12:00:00Z,EBAIS.,EBAIS.
+UCR_S033,2025-08-22T02:00:00Z,Indoor free time.,Tiempo libre interior.
+UCR_S033,2025-08-22T03:00:00Z,Indoor leisure time.,Tiempo libre interior.
+UCR_S033,2025-08-22T04:00:00Z,Watch series.,Ver series.
+UCR_S033,2025-08-22T05:00:00Z,Watch series.,Ver series.
+UCR_S033,2025-08-22T17:00:00Z,Play piano.,Tocar piano.
+UCR_S033,2025-08-22T20:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-22T21:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-22T22:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-22T23:00:00Z,Indoor exercise.,Ejercicio en interior.
+UCR_S033,2025-08-23T03:00:00Z,Watch a movie.,Ver película.
+UCR_S033,2025-08-23T04:00:00Z,Watch a movie.,Ver película.
+UCR_S033,2025-08-23T05:00:00Z,Watch a movie.,Ver película.
+UCR_S033,2025-08-23T15:00:00Z,Have breakfast / take a shower.,Desayunar / bañarse.
+UCR_S033,2025-08-23T18:00:00Z,Restaurant.,Restaurante.
+UCR_S033,2025-08-23T19:00:00Z,Restaurant.,Restaurante.
+UCR_S033,2025-08-23T20:00:00Z,Restaurant.,Restaurante.
+UCR_S033,2025-08-23T21:00:00Z,Restaurant.,Restaurante.
+UCR_S033,2025-08-24T02:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-24T03:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-24T04:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-24T16:00:00Z,Church,Iglesia.
+UCR_S033,2025-08-24T17:00:00Z,Church.,Iglesia.
+UCR_S033,2025-08-24T18:00:00Z,Church.,Iglesia.
+UCR_S033,2025-08-24T21:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-24T22:00:00Z,Play videogames.,Jugar videojuegos.
+UCR_S033,2025-08-25T01:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-25T02:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S033,2025-08-25T03:00:00Z,Play video games.,Jugar videojuegos.
+UCR_S035,2025-08-26T19:00:00Z,Lunch at Compadres.,Almuerzo en Compadres.
+UCR_S035,2025-08-29T04:00:00Z,Playing video games.,Jugando videojuegos.
+UCR_S035,2025-08-29T05:00:00Z,Playing videogames.,Jugando videojuegos.
+UCR_S035,2025-08-29T16:00:00Z,Inside a store.,Interior de una tienda.
+UCR_S035,2025-08-29T17:00:00Z,Inside a store.,Interior de una tienda.
+UCR_S035,2025-08-29T18:00:00Z,Inside a restaurant.,Interior de un restaurante.
+UCR_S035,2025-08-29T19:00:00Z,Restaurant / hotel.,Restaurante / hotel.
+UCR_S035,2025-08-29T20:00:00Z,Restaurant / hotel.,Restaurante / hotel.
+UCR_S035,2025-08-29T21:00:00Z,Farmer's market.,Feria del agricultor.
+UCR_S035,2025-08-29T22:00:00Z,Farmer's market.,Feria del agricultor.
+UCR_S035,2025-08-29T23:00:00Z,PriceSmart.,PriceSmart.
+UCR_S035,2025-08-30T02:00:00Z,Restaurant.,Restaurante.
+UCR_S035,2025-08-30T03:00:00Z,Restaurant.,Restaurante.
+UCR_S035,2025-08-31T19:00:00Z,Church.,Iglesia.
+UCR_S036,2025-08-27T18:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S036,2025-08-28T02:00:00Z,Movies.,Cine.
+UCR_S036,2025-08-28T03:00:00Z,Cinema,Cine.
+UCR_S036,2025-08-29T03:00:00Z,Cinema,Cine.
+UCR_S036,2025-08-29T04:00:00Z,Cinema,Cine.
+UCR_S038,2025-08-27T01:00:00Z,Watch movies.,Ver películas.
+UCR_S038,2025-08-27T02:00:00Z,Watch movies.,Ver películas.
+UCR_S038,2025-08-27T03:00:00Z,Watch movies.,Ver películas.
+UCR_S038,2025-08-27T16:00:00Z,National Museum,Museo Nacional.
+UCR_S038,2025-08-27T17:00:00Z,National Museum,Museo Nacional.
+UCR_S038,2025-08-30T00:00:00Z,Watching a movie.,Viendo una película.
+UCR_S038,2025-08-30T01:00:00Z,Watching a movie.,Viendo una película.
+UCR_S038,2025-08-30T03:00:00Z,At the beach.,En la playa.
+UCR_S038,2025-08-30T04:00:00Z,At the beach.,En la playa.
+UCR_S038,2025-08-30T05:00:00Z,At the beach.,En la playa.
+UCR_S038,2025-08-30T06:00:00Z,Bar / restaurant.,Bar / restaurante.
+UCR_S038,2025-08-31T03:00:00Z,Bar / restaurant.,Bar / restaurante.
+UCR_S038,2025-08-31T04:00:00Z,Bar / restaurant.,Bar / restaurante.
+UCR_S038,2025-08-31T05:00:00Z,Bar / restaurant.,Bar / restaurante.
+UCR_S038,2025-08-31T14:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T15:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T16:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T17:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T18:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T19:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T20:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T21:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T22:00:00Z,Fishing.,Pescando.
+UCR_S038,2025-08-31T23:00:00Z,Sunset.,Atardecer.
+UCR_S038,2025-09-02T01:00:00Z,Restaurant.,Restaurante.
+UCR_S038,2025-09-02T02:00:00Z,Restaurant.,Restaurante.
+UCR_S038,2025-09-02T03:00:00Z,Restaurant.,Restaurante.
+UCR_S040,2025-09-05T23:00:00Z,Indoor sports.,Deporte en interiores.
+UCR_S040,2025-09-06T21:00:00Z,School notes and appointment.,Notas escuela y cita.
+UCR_S040,2025-09-06T22:00:00Z,School notes and appointment.,Notas escuela y cita.
+UCR_S040,2025-09-07T13:00:00Z,Outdoor sports.,Deporte en exteriores.
+UCR_S040,2025-09-07T14:00:00Z,Outdoor sports.,Deporte en exteriores.
