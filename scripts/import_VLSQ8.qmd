@@ -115,5 +115,5 @@ data <- data |> rename(Id = record_id)
 vslq8 <- data
 path <- "../data/imported/"
 if(!dir.exists(path)) dir.create(path, recursive = TRUE)
-save(vslq8, file = "../data/imported/vslq8.RData")
+save(vslq8, file = "../data/imported/vlsq8.RData")
 ```
