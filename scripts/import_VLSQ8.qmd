@@ -86,6 +86,19 @@ data <-
 data$record_id <- add_label(data$record_id, "Record ID")
 ```
 
+## Calculate composit score
+
+```{r}
+data <- 
+data |> 
+  rowwise() |> 
+  mutate(VLSQ8 = sum(c_across(sensitivity:glasses) |> as.numeric())) |> 
+  ungroup() |> 
+  relocate(.after = record_id, VLSQ8)
+data$VLSQ8 <- add_label(data$VLSQ8, "VLSQ-8 sum score (light sensitivity)")
+
+```
+
 ## Summarize results
 
 ```{r}
