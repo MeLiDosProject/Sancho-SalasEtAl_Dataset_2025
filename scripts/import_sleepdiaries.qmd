@@ -105,6 +105,17 @@ data <-
   data |> drop_na(sleepprep)
 ```
 
+### Ensure nighttime awake duration when there are no awakenings
+
+```{r}
+data <-
+  data |> 
+  mutate(
+    awake_duration = replace_when(awake_duration,
+                                  awakenings == 0 ~ 0)
+  )
+```
+
 ## Summarize results
 
 ```{r}
