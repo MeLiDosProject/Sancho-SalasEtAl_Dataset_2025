@@ -2245,28 +2245,25 @@ vertical-align: -.125em;
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package &#39;dplyr&#39; was built under R version 4.5.2</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(LightLogR)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package &#39;LightLogR&#39; was built under R version 4.5.2</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>remote <span class="ot">&lt;-</span> </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://raw.githubusercontent.com/MeLiDosProject/Data_Metadata_Conventions/main/scripts/&quot;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;labeling&quot;</span>,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;radio_factors&quot;</span>,</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;time_summaries&quot;</span>,</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;prepare_codebook&quot;</span>,</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;filefinder&quot;</span>,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;general_parameters&quot;</span>,</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;coltype_checker&quot;</span>,</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;diarydate&quot;</span>,</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tables&quot;</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> <span class="fu">walk</span>(\(x) <span class="fu">source</span>(<span class="fu">paste0</span>(remote, x, <span class="st">&quot;.R&quot;</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(LightLogR)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>remote <span class="ot">&lt;-</span> </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://raw.githubusercontent.com/MeLiDosProject/Data_Metadata_Conventions/main/scripts/&quot;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;labeling&quot;</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;radio_factors&quot;</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;time_summaries&quot;</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;prepare_codebook&quot;</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;filefinder&quot;</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;general_parameters&quot;</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;coltype_checker&quot;</span>,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;diarydate&quot;</span>,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tables&quot;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> <span class="fu">walk</span>(\(x) <span class="fu">source</span>(<span class="fu">paste0</span>(remote, x, <span class="st">&quot;.R&quot;</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package &#39;rlang&#39; was built under R version 4.5.2</code></pre>
 </div>
@@ -2275,35 +2272,35 @@ vertical-align: -.125em;
 <section id="preparation" class="level2">
 <h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collect codebook</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>codebook <span class="ot">&lt;-</span> <span class="fu">prepare_codebook</span>(<span class="st">&quot;MeLiDosEveningDiaries_DataDictionary_2024-10-16.csv&quot;</span>, <span class="at">form.filter =</span> <span class="st">&quot;exercise_diary&quot;</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#collect files</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">filefinder</span>(<span class="st">&quot;exercisediary&quot;</span>, <span class="at">continuous =</span> <span class="cn">TRUE</span>, <span class="at">individual =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#import files</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(files, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2$&quot;</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>(instructions) <span class="sc">|&gt;</span> </span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>         )</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collect codebook</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>codebook <span class="ot">&lt;-</span> <span class="fu">prepare_codebook</span>(<span class="st">&quot;MeLiDosEveningDiaries_DataDictionary_2024-10-16.csv&quot;</span>, <span class="at">form.filter =</span> <span class="st">&quot;exercise_diary&quot;</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#collect files</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">filefinder</span>(<span class="st">&quot;exercisediary&quot;</span>, <span class="at">continuous =</span> <span class="cn">TRUE</span>, <span class="at">individual =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#import files</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(files, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2$&quot;</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>(instructions) <span class="sc">|&gt;</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>         )</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="arsqsdhqxd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#arsqsdhqxd table {
+<div id="vysckfuwbt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vysckfuwbt table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#arsqsdhqxd thead, #arsqsdhqxd tbody, #arsqsdhqxd tfoot, #arsqsdhqxd tr, #arsqsdhqxd td, #arsqsdhqxd th {
+#vysckfuwbt thead, #vysckfuwbt tbody, #vysckfuwbt tfoot, #vysckfuwbt tr, #vysckfuwbt td, #vysckfuwbt th {
 border-style: none;
 }
-#arsqsdhqxd p {
+#vysckfuwbt p {
 margin: 0;
 padding: 0;
 }
-#arsqsdhqxd .gt_table {
+#vysckfuwbt .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2328,11 +2325,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_caption {
+#vysckfuwbt .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#arsqsdhqxd .gt_title {
+#vysckfuwbt .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -2343,7 +2340,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#arsqsdhqxd .gt_subtitle {
+#vysckfuwbt .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -2354,7 +2351,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#arsqsdhqxd .gt_heading {
+#vysckfuwbt .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -2365,12 +2362,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_bottom_border {
+#vysckfuwbt .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_col_headings {
+#vysckfuwbt .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2384,7 +2381,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_col_heading {
+#vysckfuwbt .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2403,7 +2400,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#arsqsdhqxd .gt_column_spanner_outer {
+#vysckfuwbt .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2414,13 +2411,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#arsqsdhqxd .gt_column_spanner_outer:first-child {
+#vysckfuwbt .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#arsqsdhqxd .gt_column_spanner_outer:last-child {
+#vysckfuwbt .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#arsqsdhqxd .gt_column_spanner {
+#vysckfuwbt .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -2431,10 +2428,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#arsqsdhqxd .gt_spanner_row {
+#vysckfuwbt .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#arsqsdhqxd .gt_group_heading {
+#vysckfuwbt .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2459,7 +2456,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#arsqsdhqxd .gt_empty_group_heading {
+#vysckfuwbt .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -2473,13 +2470,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#arsqsdhqxd .gt_from_md > :first-child {
+#vysckfuwbt .gt_from_md > :first-child {
 margin-top: 0;
 }
-#arsqsdhqxd .gt_from_md > :last-child {
+#vysckfuwbt .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#arsqsdhqxd .gt_row {
+#vysckfuwbt .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2497,7 +2494,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#arsqsdhqxd .gt_stub {
+#vysckfuwbt .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2509,7 +2506,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#arsqsdhqxd .gt_stub_row_group {
+#vysckfuwbt .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2522,13 +2519,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#arsqsdhqxd .gt_row_group_first td {
+#vysckfuwbt .gt_row_group_first td {
 border-top-width: 2px;
 }
-#arsqsdhqxd .gt_row_group_first th {
+#vysckfuwbt .gt_row_group_first th {
 border-top-width: 2px;
 }
-#arsqsdhqxd .gt_summary_row {
+#vysckfuwbt .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2537,14 +2534,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#arsqsdhqxd .gt_first_summary_row {
+#vysckfuwbt .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_first_summary_row.thick {
+#vysckfuwbt .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#arsqsdhqxd .gt_last_summary_row {
+#vysckfuwbt .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2553,7 +2550,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_grand_summary_row {
+#vysckfuwbt .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2562,7 +2559,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#arsqsdhqxd .gt_first_grand_summary_row {
+#vysckfuwbt .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2571,7 +2568,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_last_grand_summary_row_top {
+#vysckfuwbt .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2580,10 +2577,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_striped {
+#vysckfuwbt .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#arsqsdhqxd .gt_table_body {
+#vysckfuwbt .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2591,7 +2588,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_footnotes {
+#vysckfuwbt .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2604,7 +2601,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_footnote {
+#vysckfuwbt .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -2612,7 +2609,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#arsqsdhqxd .gt_sourcenotes {
+#vysckfuwbt .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2625,64 +2622,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#arsqsdhqxd .gt_sourcenote {
+#vysckfuwbt .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#arsqsdhqxd .gt_left {
+#vysckfuwbt .gt_left {
 text-align: left;
 }
-#arsqsdhqxd .gt_center {
+#vysckfuwbt .gt_center {
 text-align: center;
 }
-#arsqsdhqxd .gt_right {
+#vysckfuwbt .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#arsqsdhqxd .gt_font_normal {
+#vysckfuwbt .gt_font_normal {
 font-weight: normal;
 }
-#arsqsdhqxd .gt_font_bold {
+#vysckfuwbt .gt_font_bold {
 font-weight: bold;
 }
-#arsqsdhqxd .gt_font_italic {
+#vysckfuwbt .gt_font_italic {
 font-style: italic;
 }
-#arsqsdhqxd .gt_super {
+#vysckfuwbt .gt_super {
 font-size: 65%;
 }
-#arsqsdhqxd .gt_footnote_marks {
+#vysckfuwbt .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#arsqsdhqxd .gt_asterisk {
+#vysckfuwbt .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#arsqsdhqxd .gt_indent_1 {
+#vysckfuwbt .gt_indent_1 {
 text-indent: 5px;
 }
-#arsqsdhqxd .gt_indent_2 {
+#vysckfuwbt .gt_indent_2 {
 text-indent: 10px;
 }
-#arsqsdhqxd .gt_indent_3 {
+#vysckfuwbt .gt_indent_3 {
 text-indent: 15px;
 }
-#arsqsdhqxd .gt_indent_4 {
+#vysckfuwbt .gt_indent_4 {
 text-indent: 20px;
 }
-#arsqsdhqxd .gt_indent_5 {
+#vysckfuwbt .gt_indent_5 {
 text-indent: 25px;
 }
-#arsqsdhqxd .katex-display {
+#vysckfuwbt .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#arsqsdhqxd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vysckfuwbt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -2831,89 +2828,89 @@ height: 0px !important;
 
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns: POSIXct, Date &amp; numeric</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#add specific character columns</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, relevant_columns)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(record_id, <span class="fu">any_of</span>(codebook<span class="sc">$</span><span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(scheduledate_3, uuid_3, supplementaldata_3, serializedresult_3, status_3))</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>record_id, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Record ID&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns: POSIXct, Date &amp; numeric</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#add specific character columns</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, relevant_columns)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(record_id, <span class="fu">any_of</span>(codebook<span class="sc">$</span><span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(scheduledate_3, uuid_3, supplementaldata_3, serializedresult_3, status_3))</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>record_id, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Record ID&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="translate-comments-into-english" class="level2">
 <h2 class="anchored" data-anchor-id="translate-comments-into-english">Translate comments into english</h2>
 <p>Native language is translated into English with AI and later checked by a site researcher.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(ellmer)</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the relevant codebook portions</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook_red &lt;-</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook|&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(codebook), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;)) |&gt;</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   list_c() |&gt;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   paste0(collapse = &quot;newline: &quot;)</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># chat &lt;- chat_openai(paste0(&quot;Clean the dataset according to the instructions in the output structure. Here is the codebook: &quot;))</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the input</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># data|&gt;</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   select(record_id, type)</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red |&gt;</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(data_red), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;))</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="co"># #creating an output structure</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># type_data &lt;- type_object(</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="co">#   record_id = type_string(&quot;use the record_id information&quot;),</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_string(&quot;copy the type information here&quot;, required = FALSE),</span></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co">#   type_english = type_string(&quot;translation of the type into english&quot;, required = FALSE)</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co"># parallel_chat_structured(</span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">#   chat,</span></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red,</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_data</span></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="co"># #Ensure that no NA is caught as string</span></span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="co">#   mutate(type = case_when(type == &quot;NA&quot; ~ NA, .default = type),</span></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="co">#          type_english = case_when(type_english == &quot;NA&quot; ~ NA, .default = type_english))</span></span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="co"># #check that input and output are identical</span></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$type == data$type, na.rm = TRUE))</span></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$record_id == data$record_id, na.rm = TRUE))</span></span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a><span class="co">#   distinct(record_id, type, .keep_all = TRUE)</span></span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a><span class="co"># path &lt;- &quot;../data/AI_translations/&quot;</span></span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a><span class="co"># if(!dir.exists(path)) dir.create(path, recursive = TRUE)</span></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="co"># write_csv(data_llm, &quot;../data/AI_translations/exercisediary.csv&quot;)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(ellmer)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the relevant codebook portions</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook_red &lt;-</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook|&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(codebook), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;)) |&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   list_c() |&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   paste0(collapse = &quot;newline: &quot;)</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># chat &lt;- chat_openai(paste0(&quot;Clean the dataset according to the instructions in the output structure. Here is the codebook: &quot;))</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the input</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># data|&gt;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   select(record_id, type)</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red |&gt;</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(data_red), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;))</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># #creating an output structure</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co"># type_data &lt;- type_object(</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">#   record_id = type_string(&quot;use the record_id information&quot;),</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_string(&quot;copy the type information here&quot;, required = FALSE),</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">#   type_english = type_string(&quot;translation of the type into english&quot;, required = FALSE)</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co"># parallel_chat_structured(</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">#   chat,</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red,</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_data</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="co"># #Ensure that no NA is caught as string</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="co">#   mutate(type = case_when(type == &quot;NA&quot; ~ NA, .default = type),</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="co">#          type_english = case_when(type_english == &quot;NA&quot; ~ NA, .default = type_english))</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="co"># #check that input and output are identical</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$type == data$type, na.rm = TRUE))</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$record_id == data$record_id, na.rm = TRUE))</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a><span class="co">#   distinct(record_id, type, .keep_all = TRUE)</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="co"># path &lt;- &quot;../data/AI_translations/&quot;</span></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="co"># if(!dir.exists(path)) dir.create(path, recursive = TRUE)</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="co"># write_csv(data_llm, &quot;../data/AI_translations/exercisediary.csv&quot;)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data_llm <span class="ot">&lt;-</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">&quot;../data/AI_translations/exercisediary.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_llm <span class="ot">&lt;-</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">&quot;../data/AI_translations/exercisediary.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 154 Columns: 3
 ── Column specification ────────────────────────────────────────────────────────
@@ -2923,30 +2920,30 @@ chr (3): record_id, type, type_english
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#add output to original</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">left_join</span>(data_llm, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, <span class="st">&quot;type&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#add output to original</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">left_join</span>(data_llm, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, <span class="st">&quot;type&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="set-relevant-dates" class="level2">
 <h2 class="anchored" data-anchor-id="set-relevant-dates">Set relevant dates</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#if data was collected between 14:00 and 24:00, it is assigned to the same day.</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#if collected between 00:00 and 13:59, it is assigned to the previous day.</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">diarydate</span>(startdate_3)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>Date, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Date&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#if data was collected between 14:00 and 24:00, it is assigned to the same day.</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#if collected between 00:00 and 13:59, it is assigned to the previous day.</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">diarydate</span>(startdate_3)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>Date, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Date&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="adjust-minute-column-names" class="level2">
 <h2 class="anchored" data-anchor-id="adjust-minute-column-names">Adjust minute column names</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(commute, sedentary), \(x) <span class="fu">as.difftime</span>(x, <span class="at">unit =</span> <span class="st">&quot;mins&quot;</span>)))</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(commute, sedentary), \(x) <span class="fu">as.difftime</span>(x, <span class="at">unit =</span> <span class="st">&quot;mins&quot;</span>)))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in add_col_labels(data, codebook, var_col = `Variable / Field Name`, :
 Labels provided for variables not in `data`: uuid_3, scheduledate_3, status_3,
@@ -2957,22 +2954,22 @@ supplementaldata_3, serializedresult_3</code></pre>
 <section id="summarize-results" class="level2">
 <h2 class="anchored" data-anchor-id="summarize-results">Summarize results</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table_exercisediary</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table_exercisediary</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="lxthcylumz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lxthcylumz table {
+<div id="kyrnxenaev" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kyrnxenaev table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#lxthcylumz thead, #lxthcylumz tbody, #lxthcylumz tfoot, #lxthcylumz tr, #lxthcylumz td, #lxthcylumz th {
+#kyrnxenaev thead, #kyrnxenaev tbody, #kyrnxenaev tfoot, #kyrnxenaev tr, #kyrnxenaev td, #kyrnxenaev th {
 border-style: none;
 }
-#lxthcylumz p {
+#kyrnxenaev p {
 margin: 0;
 padding: 0;
 }
-#lxthcylumz .gt_table {
+#kyrnxenaev .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2997,11 +2994,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#lxthcylumz .gt_caption {
+#kyrnxenaev .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#lxthcylumz .gt_title {
+#kyrnxenaev .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -3012,7 +3009,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#lxthcylumz .gt_subtitle {
+#kyrnxenaev .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -3023,7 +3020,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#lxthcylumz .gt_heading {
+#kyrnxenaev .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -3034,12 +3031,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lxthcylumz .gt_bottom_border {
+#kyrnxenaev .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lxthcylumz .gt_col_headings {
+#kyrnxenaev .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3053,7 +3050,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lxthcylumz .gt_col_heading {
+#kyrnxenaev .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3072,7 +3069,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#lxthcylumz .gt_column_spanner_outer {
+#kyrnxenaev .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3083,13 +3080,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#lxthcylumz .gt_column_spanner_outer:first-child {
+#kyrnxenaev .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#lxthcylumz .gt_column_spanner_outer:last-child {
+#kyrnxenaev .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#lxthcylumz .gt_column_spanner {
+#kyrnxenaev .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -3100,10 +3097,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#lxthcylumz .gt_spanner_row {
+#kyrnxenaev .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#lxthcylumz .gt_group_heading {
+#kyrnxenaev .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3128,7 +3125,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#lxthcylumz .gt_empty_group_heading {
+#kyrnxenaev .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -3142,13 +3139,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#lxthcylumz .gt_from_md > :first-child {
+#kyrnxenaev .gt_from_md > :first-child {
 margin-top: 0;
 }
-#lxthcylumz .gt_from_md > :last-child {
+#kyrnxenaev .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#lxthcylumz .gt_row {
+#kyrnxenaev .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3166,7 +3163,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#lxthcylumz .gt_stub {
+#kyrnxenaev .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3178,7 +3175,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lxthcylumz .gt_stub_row_group {
+#kyrnxenaev .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3191,13 +3188,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#lxthcylumz .gt_row_group_first td {
+#kyrnxenaev .gt_row_group_first td {
 border-top-width: 2px;
 }
-#lxthcylumz .gt_row_group_first th {
+#kyrnxenaev .gt_row_group_first th {
 border-top-width: 2px;
 }
-#lxthcylumz .gt_summary_row {
+#kyrnxenaev .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3206,14 +3203,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lxthcylumz .gt_first_summary_row {
+#kyrnxenaev .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#lxthcylumz .gt_first_summary_row.thick {
+#kyrnxenaev .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#lxthcylumz .gt_last_summary_row {
+#kyrnxenaev .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3222,7 +3219,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lxthcylumz .gt_grand_summary_row {
+#kyrnxenaev .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3231,7 +3228,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lxthcylumz .gt_first_grand_summary_row {
+#kyrnxenaev .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3240,7 +3237,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#lxthcylumz .gt_last_grand_summary_row_top {
+#kyrnxenaev .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3249,10 +3246,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#lxthcylumz .gt_striped {
+#kyrnxenaev .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#lxthcylumz .gt_table_body {
+#kyrnxenaev .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3260,7 +3257,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lxthcylumz .gt_footnotes {
+#kyrnxenaev .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3273,7 +3270,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lxthcylumz .gt_footnote {
+#kyrnxenaev .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -3281,7 +3278,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lxthcylumz .gt_sourcenotes {
+#kyrnxenaev .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3294,64 +3291,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lxthcylumz .gt_sourcenote {
+#kyrnxenaev .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lxthcylumz .gt_left {
+#kyrnxenaev .gt_left {
 text-align: left;
 }
-#lxthcylumz .gt_center {
+#kyrnxenaev .gt_center {
 text-align: center;
 }
-#lxthcylumz .gt_right {
+#kyrnxenaev .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#lxthcylumz .gt_font_normal {
+#kyrnxenaev .gt_font_normal {
 font-weight: normal;
 }
-#lxthcylumz .gt_font_bold {
+#kyrnxenaev .gt_font_bold {
 font-weight: bold;
 }
-#lxthcylumz .gt_font_italic {
+#kyrnxenaev .gt_font_italic {
 font-style: italic;
 }
-#lxthcylumz .gt_super {
+#kyrnxenaev .gt_super {
 font-size: 65%;
 }
-#lxthcylumz .gt_footnote_marks {
+#kyrnxenaev .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#lxthcylumz .gt_asterisk {
+#kyrnxenaev .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#lxthcylumz .gt_indent_1 {
+#kyrnxenaev .gt_indent_1 {
 text-indent: 5px;
 }
-#lxthcylumz .gt_indent_2 {
+#kyrnxenaev .gt_indent_2 {
 text-indent: 10px;
 }
-#lxthcylumz .gt_indent_3 {
+#kyrnxenaev .gt_indent_3 {
 text-indent: 15px;
 }
-#lxthcylumz .gt_indent_4 {
+#kyrnxenaev .gt_indent_4 {
 text-indent: 20px;
 }
-#lxthcylumz .gt_indent_5 {
+#kyrnxenaev .gt_indent_5 {
 text-indent: 25px;
 }
-#lxthcylumz .katex-display {
+#kyrnxenaev .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#lxthcylumz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kyrnxenaev div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -3366,13 +3363,13 @@ height: 0px !important;
 <tr class="gt_col_headings header">
 <th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Evening exercise diary</strong></th>
 <th id="n" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>N</strong></th>
-<th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>N = 248</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>N = 255</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">My day involved the following type of physical activity</td>
-<td class="gt_row gt_center" headers="n">248</td>
+<td class="gt_row gt_center" headers="n">255</td>
 <td class="gt_row gt_center" headers="stat_0"><br>
 </td>
 </tr>
@@ -3392,17 +3389,17 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="label">    Light (causing small to no increases in heart rate and breathing, e.g. taking a stroll in the park)</td>
 <td class="gt_row gt_center" headers="n"><br>
 </td>
-<td class="gt_row gt_center" headers="stat_0">54 (22%)</td>
+<td class="gt_row gt_center" headers="stat_0">55 (22%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">    None of the above, I did not perform any type of physical activity</td>
 <td class="gt_row gt_center" headers="n"><br>
 </td>
-<td class="gt_row gt_center" headers="stat_0">113 (46%)</td>
+<td class="gt_row gt_center" headers="stat_0">119 (47%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">I performed physical activity</td>
-<td class="gt_row gt_center" headers="n">137</td>
+<td class="gt_row gt_center" headers="n">138</td>
 <td class="gt_row gt_center" headers="stat_0"><br>
 </td>
 </tr>
@@ -3410,7 +3407,7 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="label">    Outdoors (e.g. running, cycling in the city)</td>
 <td class="gt_row gt_center" headers="n"><br>
 </td>
-<td class="gt_row gt_center" headers="stat_0">67 (49%)</td>
+<td class="gt_row gt_center" headers="stat_0">68 (49%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">    Indoors (e.g. gym or home workout)</td>
@@ -3428,28 +3425,28 @@ height: 0px !important;
 <td class="gt_row gt_left" headers="label">    missing</td>
 <td class="gt_row gt_center" headers="n"><br>
 </td>
-<td class="gt_row gt_center" headers="stat_0">111</td>
+<td class="gt_row gt_center" headers="stat_0">117</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">How much time did you spend walking and/or cycling to get to and from places? Please answer in minutes</td>
-<td class="gt_row gt_center" headers="n">248</td>
+<td class="gt_row gt_center" headers="n">255</td>
 <td class="gt_row gt_center" headers="stat_0">30 mins (10 mins, 60 mins)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">How much time did you spend sitting or reclining? Please answer in minutes</td>
-<td class="gt_row gt_center" headers="n">248</td>
-<td class="gt_row gt_center" headers="stat_0">570 mins (300 mins, 720 mins)</td>
+<td class="gt_row gt_center" headers="n">255</td>
+<td class="gt_row gt_center" headers="stat_0">560 mins (300 mins, 720 mins)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label" style="font-weight: bold">Did you wear the light glasses while doing exercises?</td>
-<td class="gt_row gt_center" headers="n">135</td>
-<td class="gt_row gt_center" headers="stat_0">44 (33%)</td>
+<td class="gt_row gt_center" headers="n">136</td>
+<td class="gt_row gt_center" headers="stat_0">44 (32%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">    missing</td>
 <td class="gt_row gt_center" headers="n"><br>
 </td>
-<td class="gt_row gt_center" headers="stat_0">113</td>
+<td class="gt_row gt_center" headers="stat_0">119</td>
 </tr>
 </tbody><tfoot class="gt_footnotes">
 <tr class="odd">
@@ -3461,19 +3458,19 @@ height: 0px !important;
 
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_exercisediary</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_exercisediary.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_exercisediary</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_exercisediary.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>file:////var/folders/9p/326_k3kx43qbn_cyl1rqfhb00000gn/T//Rtmp4dk9dr/file3df915eccd5.html screenshot completed</code></pre>
+<pre><code>file:////var/folders/9p/326_k3kx43qbn_cyl1rqfhb00000gn/T//RtmpTKOHM0/file38745bf8ec56.html screenshot completed</code></pre>
 </div>
 </div>
 <section id="export" class="level3">
 <h3 class="anchored" data-anchor-id="export">Export</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>exercisediary <span class="ot">&lt;-</span> data</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/continuous/&quot;</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(exercisediary, <span class="at">file =</span> <span class="st">&quot;../data/imported/continuous/exercisediary.RData&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>exercisediary <span class="ot">&lt;-</span> data</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/continuous/&quot;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(exercisediary, <span class="at">file =</span> <span class="st">&quot;../data/imported/continuous/exercisediary.RData&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <!-- -->
 
@@ -3933,193 +3930,193 @@ height: 0px !important;
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Import exercise diaries&quot;</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> &quot;Johannes Zauner&quot;</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co">    self-contained: true</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preface</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>This document imports the <span class="in">`exercisediary`</span> and shows descriptive statistics for the site.</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(LightLogR)</span>
-<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
-<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>remote <span class="ot">&lt;-</span> </span>
-<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://raw.githubusercontent.com/MeLiDosProject/Data_Metadata_Conventions/main/scripts/&quot;</span></span>
-<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;labeling&quot;</span>,</span>
-<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;radio_factors&quot;</span>,</span>
-<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;time_summaries&quot;</span>,</span>
-<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;prepare_codebook&quot;</span>,</span>
-<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;filefinder&quot;</span>,</span>
-<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;general_parameters&quot;</span>,</span>
-<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;coltype_checker&quot;</span>,</span>
-<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;diarydate&quot;</span>,</span>
-<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tables&quot;</span></span>
-<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> <span class="fu">walk</span>(\(x) <span class="fu">source</span>(<span class="fu">paste0</span>(remote, x, <span class="st">&quot;.R&quot;</span>)))</span>
-<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preparation</span></span>
-<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a><span class="co">#collect codebook</span></span>
-<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>codebook <span class="ot">&lt;-</span> <span class="fu">prepare_codebook</span>(<span class="st">&quot;MeLiDosEveningDiaries_DataDictionary_2024-10-16.csv&quot;</span>, <span class="at">form.filter =</span> <span class="st">&quot;exercise_diary&quot;</span>)</span>
-<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a><span class="co">#collect files</span></span>
-<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">filefinder</span>(<span class="st">&quot;exercisediary&quot;</span>, <span class="at">continuous =</span> <span class="cn">TRUE</span>, <span class="at">individual =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a><span class="co">#import files</span></span>
-<span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(files, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2$&quot;</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb21-54"><a href="#cb21-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>(instructions) <span class="sc">|&gt;</span> </span>
-<span id="cb21-55"><a href="#cb21-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb21-56"><a href="#cb21-56" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>)</span>
-<span id="cb21-57"><a href="#cb21-57" aria-hidden="true" tabindex="-1"></a>         )</span>
-<span id="cb21-58"><a href="#cb21-58" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
-<span id="cb21-59"><a href="#cb21-59" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
-<span id="cb21-60"><a href="#cb21-60" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span>
-<span id="cb21-61"><a href="#cb21-61" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns: POSIXct, Date &amp; numeric</span></span>
-<span id="cb21-62"><a href="#cb21-62" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
-<span id="cb21-63"><a href="#cb21-63" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
-<span id="cb21-64"><a href="#cb21-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
-<span id="cb21-65"><a href="#cb21-65" aria-hidden="true" tabindex="-1"></a><span class="co">#add specific character columns</span></span>
-<span id="cb21-66"><a href="#cb21-66" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, relevant_columns)</span>
-<span id="cb21-67"><a href="#cb21-67" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
-<span id="cb21-68"><a href="#cb21-68" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
-<span id="cb21-69"><a href="#cb21-69" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
-<span id="cb21-70"><a href="#cb21-70" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb21-71"><a href="#cb21-71" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb21-72"><a href="#cb21-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
-<span id="cb21-73"><a href="#cb21-73" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
-<span id="cb21-74"><a href="#cb21-74" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
-<span id="cb21-75"><a href="#cb21-75" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
-<span id="cb21-76"><a href="#cb21-76" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
-<span id="cb21-77"><a href="#cb21-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb21-78"><a href="#cb21-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(record_id, <span class="fu">any_of</span>(codebook<span class="sc">$</span><span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb21-79"><a href="#cb21-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(scheduledate_3, uuid_3, supplementaldata_3, serializedresult_3, status_3))</span>
-<span id="cb21-80"><a href="#cb21-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-81"><a href="#cb21-81" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>record_id, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Record ID&quot;</span></span>
-<span id="cb21-82"><a href="#cb21-82" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-83"><a href="#cb21-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-84"><a href="#cb21-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Translate comments into english</span></span>
-<span id="cb21-85"><a href="#cb21-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-86"><a href="#cb21-86" aria-hidden="true" tabindex="-1"></a>Native language is translated into English with AI and later checked by a site researcher.</span>
-<span id="cb21-87"><a href="#cb21-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-90"><a href="#cb21-90" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-91"><a href="#cb21-91" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: translate into english with AI</span></span>
-<span id="cb21-92"><a href="#cb21-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-93"><a href="#cb21-93" aria-hidden="true" tabindex="-1"></a><span class="co"># library(ellmer)</span></span>
-<span id="cb21-94"><a href="#cb21-94" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-95"><a href="#cb21-95" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the relevant codebook portions</span></span>
-<span id="cb21-96"><a href="#cb21-96" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook_red &lt;-</span></span>
-<span id="cb21-97"><a href="#cb21-97" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook|&gt;</span></span>
-<span id="cb21-98"><a href="#cb21-98" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(codebook), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;)) |&gt;</span></span>
-<span id="cb21-99"><a href="#cb21-99" aria-hidden="true" tabindex="-1"></a><span class="co">#   list_c() |&gt;</span></span>
-<span id="cb21-100"><a href="#cb21-100" aria-hidden="true" tabindex="-1"></a><span class="co">#   paste0(collapse = &quot;newline: &quot;)</span></span>
-<span id="cb21-101"><a href="#cb21-101" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-102"><a href="#cb21-102" aria-hidden="true" tabindex="-1"></a><span class="co"># chat &lt;- chat_openai(paste0(&quot;Clean the dataset according to the instructions in the output structure. Here is the codebook: &quot;))</span></span>
-<span id="cb21-103"><a href="#cb21-103" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-104"><a href="#cb21-104" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the input</span></span>
-<span id="cb21-105"><a href="#cb21-105" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
-<span id="cb21-106"><a href="#cb21-106" aria-hidden="true" tabindex="-1"></a><span class="co"># data|&gt;</span></span>
-<span id="cb21-107"><a href="#cb21-107" aria-hidden="true" tabindex="-1"></a><span class="co">#   select(record_id, type)</span></span>
-<span id="cb21-108"><a href="#cb21-108" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
-<span id="cb21-109"><a href="#cb21-109" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red |&gt;</span></span>
-<span id="cb21-110"><a href="#cb21-110" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(data_red), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;))</span></span>
-<span id="cb21-111"><a href="#cb21-111" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-112"><a href="#cb21-112" aria-hidden="true" tabindex="-1"></a><span class="co"># #creating an output structure</span></span>
-<span id="cb21-113"><a href="#cb21-113" aria-hidden="true" tabindex="-1"></a><span class="co"># type_data &lt;- type_object(</span></span>
-<span id="cb21-114"><a href="#cb21-114" aria-hidden="true" tabindex="-1"></a><span class="co">#   record_id = type_string(&quot;use the record_id information&quot;),</span></span>
-<span id="cb21-115"><a href="#cb21-115" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_string(&quot;copy the type information here&quot;, required = FALSE),</span></span>
-<span id="cb21-116"><a href="#cb21-116" aria-hidden="true" tabindex="-1"></a><span class="co">#   type_english = type_string(&quot;translation of the type into english&quot;, required = FALSE)</span></span>
-<span id="cb21-117"><a href="#cb21-117" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb21-118"><a href="#cb21-118" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-119"><a href="#cb21-119" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
-<span id="cb21-120"><a href="#cb21-120" aria-hidden="true" tabindex="-1"></a><span class="co"># parallel_chat_structured(</span></span>
-<span id="cb21-121"><a href="#cb21-121" aria-hidden="true" tabindex="-1"></a><span class="co">#   chat,</span></span>
-<span id="cb21-122"><a href="#cb21-122" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red,</span></span>
-<span id="cb21-123"><a href="#cb21-123" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_data</span></span>
-<span id="cb21-124"><a href="#cb21-124" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
-<span id="cb21-125"><a href="#cb21-125" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-126"><a href="#cb21-126" aria-hidden="true" tabindex="-1"></a><span class="co"># #Ensure that no NA is caught as string</span></span>
-<span id="cb21-127"><a href="#cb21-127" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
-<span id="cb21-128"><a href="#cb21-128" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
-<span id="cb21-129"><a href="#cb21-129" aria-hidden="true" tabindex="-1"></a><span class="co">#   mutate(type = case_when(type == &quot;NA&quot; ~ NA, .default = type),</span></span>
-<span id="cb21-130"><a href="#cb21-130" aria-hidden="true" tabindex="-1"></a><span class="co">#          type_english = case_when(type_english == &quot;NA&quot; ~ NA, .default = type_english))</span></span>
-<span id="cb21-131"><a href="#cb21-131" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-132"><a href="#cb21-132" aria-hidden="true" tabindex="-1"></a><span class="co"># #check that input and output are identical</span></span>
-<span id="cb21-133"><a href="#cb21-133" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
-<span id="cb21-134"><a href="#cb21-134" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$type == data$type, na.rm = TRUE))</span></span>
-<span id="cb21-135"><a href="#cb21-135" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
-<span id="cb21-136"><a href="#cb21-136" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$record_id == data$record_id, na.rm = TRUE))</span></span>
-<span id="cb21-137"><a href="#cb21-137" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-138"><a href="#cb21-138" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
-<span id="cb21-139"><a href="#cb21-139" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
-<span id="cb21-140"><a href="#cb21-140" aria-hidden="true" tabindex="-1"></a><span class="co">#   distinct(record_id, type, .keep_all = TRUE)</span></span>
-<span id="cb21-141"><a href="#cb21-141" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb21-142"><a href="#cb21-142" aria-hidden="true" tabindex="-1"></a><span class="co"># path &lt;- &quot;../data/AI_translations/&quot;</span></span>
-<span id="cb21-143"><a href="#cb21-143" aria-hidden="true" tabindex="-1"></a><span class="co"># if(!dir.exists(path)) dir.create(path, recursive = TRUE)</span></span>
-<span id="cb21-144"><a href="#cb21-144" aria-hidden="true" tabindex="-1"></a><span class="co"># write_csv(data_llm, &quot;../data/AI_translations/exercisediary.csv&quot;)</span></span>
-<span id="cb21-145"><a href="#cb21-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-146"><a href="#cb21-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-149"><a href="#cb21-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-150"><a href="#cb21-150" aria-hidden="true" tabindex="-1"></a>data_llm <span class="ot">&lt;-</span> </span>
-<span id="cb21-151"><a href="#cb21-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">&quot;../data/AI_translations/exercisediary.csv&quot;</span>)</span>
-<span id="cb21-152"><a href="#cb21-152" aria-hidden="true" tabindex="-1"></a><span class="co">#add output to original</span></span>
-<span id="cb21-153"><a href="#cb21-153" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">left_join</span>(data_llm, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, <span class="st">&quot;type&quot;</span>))</span>
-<span id="cb21-154"><a href="#cb21-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-155"><a href="#cb21-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-156"><a href="#cb21-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## Set relevant dates</span></span>
-<span id="cb21-157"><a href="#cb21-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-160"><a href="#cb21-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-161"><a href="#cb21-161" aria-hidden="true" tabindex="-1"></a><span class="co">#if data was collected between 14:00 and 24:00, it is assigned to the same day.</span></span>
-<span id="cb21-162"><a href="#cb21-162" aria-hidden="true" tabindex="-1"></a><span class="co">#if collected between 00:00 and 13:59, it is assigned to the previous day.</span></span>
-<span id="cb21-163"><a href="#cb21-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-164"><a href="#cb21-164" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">diarydate</span>(startdate_3)</span>
-<span id="cb21-165"><a href="#cb21-165" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>Date, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Date&quot;</span></span>
-<span id="cb21-166"><a href="#cb21-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-167"><a href="#cb21-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-168"><a href="#cb21-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adjust minute column names</span></span>
-<span id="cb21-169"><a href="#cb21-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-172"><a href="#cb21-172" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-173"><a href="#cb21-173" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb21-174"><a href="#cb21-174" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
-<span id="cb21-175"><a href="#cb21-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(commute, sedentary), \(x) <span class="fu">as.difftime</span>(x, <span class="at">unit =</span> <span class="st">&quot;mins&quot;</span>)))</span>
-<span id="cb21-176"><a href="#cb21-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-177"><a href="#cb21-177" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
-<span id="cb21-178"><a href="#cb21-178" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb21-179"><a href="#cb21-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span>
-<span id="cb21-180"><a href="#cb21-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-181"><a href="#cb21-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-182"><a href="#cb21-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-183"><a href="#cb21-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summarize results</span></span>
-<span id="cb21-184"><a href="#cb21-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-187"><a href="#cb21-187" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-188"><a href="#cb21-188" aria-hidden="true" tabindex="-1"></a><span class="fu">table_exercisediary</span>(data)</span>
-<span id="cb21-189"><a href="#cb21-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-190"><a href="#cb21-190" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_exercisediary</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_exercisediary.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span>
-<span id="cb21-191"><a href="#cb21-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-192"><a href="#cb21-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-193"><a href="#cb21-193" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
-<span id="cb21-194"><a href="#cb21-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-197"><a href="#cb21-197" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb21-198"><a href="#cb21-198" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
-<span id="cb21-199"><a href="#cb21-199" aria-hidden="true" tabindex="-1"></a>exercisediary <span class="ot">&lt;-</span> data</span>
-<span id="cb21-200"><a href="#cb21-200" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/continuous/&quot;</span></span>
-<span id="cb21-201"><a href="#cb21-201" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb21-202"><a href="#cb21-202" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(exercisediary, <span class="at">file =</span> <span class="st">&quot;../data/imported/continuous/exercisediary.RData&quot;</span>)</span>
-<span id="cb21-203"><a href="#cb21-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Import exercise diaries&quot;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> &quot;Johannes Zauner&quot;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">    self-contained: true</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preface</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>This document imports the <span class="in">`exercisediary`</span> and shows descriptive statistics for the site.</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(LightLogR)</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>remote <span class="ot">&lt;-</span> </span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;https://raw.githubusercontent.com/MeLiDosProject/Data_Metadata_Conventions/main/scripts/&quot;</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">&quot;labeling&quot;</span>,</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;radio_factors&quot;</span>,</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;time_summaries&quot;</span>,</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;prepare_codebook&quot;</span>,</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;filefinder&quot;</span>,</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;general_parameters&quot;</span>,</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;coltype_checker&quot;</span>,</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;diarydate&quot;</span>,</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tables&quot;</span></span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> <span class="fu">walk</span>(\(x) <span class="fu">source</span>(<span class="fu">paste0</span>(remote, x, <span class="st">&quot;.R&quot;</span>)))</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preparation</span></span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a><span class="co">#collect codebook</span></span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>codebook <span class="ot">&lt;-</span> <span class="fu">prepare_codebook</span>(<span class="st">&quot;MeLiDosEveningDiaries_DataDictionary_2024-10-16.csv&quot;</span>, <span class="at">form.filter =</span> <span class="st">&quot;exercise_diary&quot;</span>)</span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="co">#collect files</span></span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">filefinder</span>(<span class="st">&quot;exercisediary&quot;</span>, <span class="at">continuous =</span> <span class="cn">TRUE</span>, <span class="at">individual =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a><span class="co">#import files</span></span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(files, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename_with</span>(\(x) <span class="fu">str_remove</span>(x, <span class="st">&quot;_v2$&quot;</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>(instructions) <span class="sc">|&gt;</span> </span>
+<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>         <span class="at">record_id =</span> <span class="fu">str_replace</span>(record_id, <span class="st">&quot;UCR&quot;</span>, <span class="st">&quot;UCR_&quot;</span>)</span>
+<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a>         )</span>
+<span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a><span class="co">#check column types</span></span>
+<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a>coltype_check <span class="ot">&lt;-</span> <span class="fu">coltype_checker</span>(codebook, data)</span>
+<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a>coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> <span class="fu">gt</span>()</span>
+<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a><span class="co">#collect relevant columns: POSIXct, Date &amp; numeric</span></span>
+<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> </span>
+<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a>  coltype_check<span class="sc">$</span>details <span class="sc">|&gt;</span> </span>
+<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(col)</span>
+<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a><span class="co">#add specific character columns</span></span>
+<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>relevant_columns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, relevant_columns)</span>
+<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a><span class="co">#select relevant columns</span></span>
+<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">any_of</span>(relevant_columns))</span>
+<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a><span class="co">#label variables</span></span>
+<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_radio_factors</span>(codebook, </span>
+<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a>                    <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, </span>
+<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a>                    <span class="at">type_col =</span> <span class="st">`</span><span class="at">Field Type</span><span class="st">`</span>,</span>
+<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels_col =</span> <span class="st">`</span><span class="at">Choices, Calculations, OR Slider Labels</span><span class="st">`</span></span>
+<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a>                    ) <span class="sc">|&gt;</span> </span>
+<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(record_id, <span class="fu">any_of</span>(codebook<span class="sc">$</span><span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(scheduledate_3, uuid_3, supplementaldata_3, serializedresult_3, status_3))</span>
+<span id="cb19-80"><a href="#cb19-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-81"><a href="#cb19-81" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>record_id, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Record ID&quot;</span></span>
+<span id="cb19-82"><a href="#cb19-82" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-83"><a href="#cb19-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-84"><a href="#cb19-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Translate comments into english</span></span>
+<span id="cb19-85"><a href="#cb19-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-86"><a href="#cb19-86" aria-hidden="true" tabindex="-1"></a>Native language is translated into English with AI and later checked by a site researcher.</span>
+<span id="cb19-87"><a href="#cb19-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-90"><a href="#cb19-90" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-91"><a href="#cb19-91" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: translate into english with AI</span></span>
+<span id="cb19-92"><a href="#cb19-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-93"><a href="#cb19-93" aria-hidden="true" tabindex="-1"></a><span class="co"># library(ellmer)</span></span>
+<span id="cb19-94"><a href="#cb19-94" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-95"><a href="#cb19-95" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the relevant codebook portions</span></span>
+<span id="cb19-96"><a href="#cb19-96" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook_red &lt;-</span></span>
+<span id="cb19-97"><a href="#cb19-97" aria-hidden="true" tabindex="-1"></a><span class="co"># codebook|&gt;</span></span>
+<span id="cb19-98"><a href="#cb19-98" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(codebook), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;)) |&gt;</span></span>
+<span id="cb19-99"><a href="#cb19-99" aria-hidden="true" tabindex="-1"></a><span class="co">#   list_c() |&gt;</span></span>
+<span id="cb19-100"><a href="#cb19-100" aria-hidden="true" tabindex="-1"></a><span class="co">#   paste0(collapse = &quot;newline: &quot;)</span></span>
+<span id="cb19-101"><a href="#cb19-101" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a><span class="co"># chat &lt;- chat_openai(paste0(&quot;Clean the dataset according to the instructions in the output structure. Here is the codebook: &quot;))</span></span>
+<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a><span class="co"># #Providing the input</span></span>
+<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
+<span id="cb19-106"><a href="#cb19-106" aria-hidden="true" tabindex="-1"></a><span class="co"># data|&gt;</span></span>
+<span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a><span class="co">#   select(record_id, type)</span></span>
+<span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a><span class="co"># data_red &lt;-</span></span>
+<span id="cb19-109"><a href="#cb19-109" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red |&gt;</span></span>
+<span id="cb19-110"><a href="#cb19-110" aria-hidden="true" tabindex="-1"></a><span class="co">#   pmap(~ paste(paste(names(data_red), c(...), sep = &quot;: &quot;), collapse = &quot;, &quot;))</span></span>
+<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-112"><a href="#cb19-112" aria-hidden="true" tabindex="-1"></a><span class="co"># #creating an output structure</span></span>
+<span id="cb19-113"><a href="#cb19-113" aria-hidden="true" tabindex="-1"></a><span class="co"># type_data &lt;- type_object(</span></span>
+<span id="cb19-114"><a href="#cb19-114" aria-hidden="true" tabindex="-1"></a><span class="co">#   record_id = type_string(&quot;use the record_id information&quot;),</span></span>
+<span id="cb19-115"><a href="#cb19-115" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_string(&quot;copy the type information here&quot;, required = FALSE),</span></span>
+<span id="cb19-116"><a href="#cb19-116" aria-hidden="true" tabindex="-1"></a><span class="co">#   type_english = type_string(&quot;translation of the type into english&quot;, required = FALSE)</span></span>
+<span id="cb19-117"><a href="#cb19-117" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb19-118"><a href="#cb19-118" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
+<span id="cb19-120"><a href="#cb19-120" aria-hidden="true" tabindex="-1"></a><span class="co"># parallel_chat_structured(</span></span>
+<span id="cb19-121"><a href="#cb19-121" aria-hidden="true" tabindex="-1"></a><span class="co">#   chat,</span></span>
+<span id="cb19-122"><a href="#cb19-122" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_red,</span></span>
+<span id="cb19-123"><a href="#cb19-123" aria-hidden="true" tabindex="-1"></a><span class="co">#   type = type_data</span></span>
+<span id="cb19-124"><a href="#cb19-124" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb19-125"><a href="#cb19-125" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-126"><a href="#cb19-126" aria-hidden="true" tabindex="-1"></a><span class="co"># #Ensure that no NA is caught as string</span></span>
+<span id="cb19-127"><a href="#cb19-127" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
+<span id="cb19-128"><a href="#cb19-128" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
+<span id="cb19-129"><a href="#cb19-129" aria-hidden="true" tabindex="-1"></a><span class="co">#   mutate(type = case_when(type == &quot;NA&quot; ~ NA, .default = type),</span></span>
+<span id="cb19-130"><a href="#cb19-130" aria-hidden="true" tabindex="-1"></a><span class="co">#          type_english = case_when(type_english == &quot;NA&quot; ~ NA, .default = type_english))</span></span>
+<span id="cb19-131"><a href="#cb19-131" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-132"><a href="#cb19-132" aria-hidden="true" tabindex="-1"></a><span class="co"># #check that input and output are identical</span></span>
+<span id="cb19-133"><a href="#cb19-133" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
+<span id="cb19-134"><a href="#cb19-134" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$type == data$type, na.rm = TRUE))</span></span>
+<span id="cb19-135"><a href="#cb19-135" aria-hidden="true" tabindex="-1"></a><span class="co"># stopifnot(&quot;Input must by identical to output check&quot; =</span></span>
+<span id="cb19-136"><a href="#cb19-136" aria-hidden="true" tabindex="-1"></a><span class="co">#             all(data_llm$record_id == data$record_id, na.rm = TRUE))</span></span>
+<span id="cb19-137"><a href="#cb19-137" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-138"><a href="#cb19-138" aria-hidden="true" tabindex="-1"></a><span class="co"># data_llm &lt;-</span></span>
+<span id="cb19-139"><a href="#cb19-139" aria-hidden="true" tabindex="-1"></a><span class="co">#   data_llm |&gt;</span></span>
+<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a><span class="co">#   distinct(record_id, type, .keep_all = TRUE)</span></span>
+<span id="cb19-141"><a href="#cb19-141" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb19-142"><a href="#cb19-142" aria-hidden="true" tabindex="-1"></a><span class="co"># path &lt;- &quot;../data/AI_translations/&quot;</span></span>
+<span id="cb19-143"><a href="#cb19-143" aria-hidden="true" tabindex="-1"></a><span class="co"># if(!dir.exists(path)) dir.create(path, recursive = TRUE)</span></span>
+<span id="cb19-144"><a href="#cb19-144" aria-hidden="true" tabindex="-1"></a><span class="co"># write_csv(data_llm, &quot;../data/AI_translations/exercisediary.csv&quot;)</span></span>
+<span id="cb19-145"><a href="#cb19-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-146"><a href="#cb19-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-149"><a href="#cb19-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-150"><a href="#cb19-150" aria-hidden="true" tabindex="-1"></a>data_llm <span class="ot">&lt;-</span> </span>
+<span id="cb19-151"><a href="#cb19-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">&quot;../data/AI_translations/exercisediary.csv&quot;</span>)</span>
+<span id="cb19-152"><a href="#cb19-152" aria-hidden="true" tabindex="-1"></a><span class="co">#add output to original</span></span>
+<span id="cb19-153"><a href="#cb19-153" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">left_join</span>(data_llm, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;record_id&quot;</span>, <span class="st">&quot;type&quot;</span>))</span>
+<span id="cb19-154"><a href="#cb19-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-155"><a href="#cb19-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-156"><a href="#cb19-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## Set relevant dates</span></span>
+<span id="cb19-157"><a href="#cb19-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-160"><a href="#cb19-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-161"><a href="#cb19-161" aria-hidden="true" tabindex="-1"></a><span class="co">#if data was collected between 14:00 and 24:00, it is assigned to the same day.</span></span>
+<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a><span class="co">#if collected between 00:00 and 13:59, it is assigned to the previous day.</span></span>
+<span id="cb19-163"><a href="#cb19-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-164"><a href="#cb19-164" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">diarydate</span>(startdate_3)</span>
+<span id="cb19-165"><a href="#cb19-165" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(data<span class="sc">$</span>Date, <span class="st">&quot;label&quot;</span>) <span class="ot">&lt;-</span> <span class="st">&quot;Date&quot;</span></span>
+<span id="cb19-166"><a href="#cb19-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-167"><a href="#cb19-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-168"><a href="#cb19-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adjust minute column names</span></span>
+<span id="cb19-169"><a href="#cb19-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-172"><a href="#cb19-172" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-173"><a href="#cb19-173" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb19-174"><a href="#cb19-174" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
+<span id="cb19-175"><a href="#cb19-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(commute, sedentary), \(x) <span class="fu">as.difftime</span>(x, <span class="at">unit =</span> <span class="st">&quot;mins&quot;</span>)))</span>
+<span id="cb19-176"><a href="#cb19-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-177"><a href="#cb19-177" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span></span>
+<span id="cb19-178"><a href="#cb19-178" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb19-179"><a href="#cb19-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_col_labels</span>(codebook, <span class="at">var_col =</span> <span class="st">`</span><span class="at">Variable / Field Name</span><span class="st">`</span>, <span class="at">label_col =</span> <span class="st">`</span><span class="at">Field Label</span><span class="st">`</span>)</span>
+<span id="cb19-180"><a href="#cb19-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-181"><a href="#cb19-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-182"><a href="#cb19-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summarize results</span></span>
+<span id="cb19-184"><a href="#cb19-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-187"><a href="#cb19-187" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-188"><a href="#cb19-188" aria-hidden="true" tabindex="-1"></a><span class="fu">table_exercisediary</span>(data)</span>
+<span id="cb19-189"><a href="#cb19-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-190"><a href="#cb19-190" aria-hidden="true" tabindex="-1"></a><span class="fu">gtsave</span>(<span class="fu">table_exercisediary</span>(data) <span class="sc">|&gt;</span> <span class="fu">as_gt</span>(), <span class="at">filename =</span> <span class="st">&quot;../output/tables/table_exercisediary.png&quot;</span>, <span class="at">vwidth =</span> <span class="dv">800</span>)</span>
+<span id="cb19-191"><a href="#cb19-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-192"><a href="#cb19-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-193"><a href="#cb19-193" aria-hidden="true" tabindex="-1"></a><span class="fu">### Export</span></span>
+<span id="cb19-194"><a href="#cb19-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-197"><a href="#cb19-197" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-198"><a href="#cb19-198" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">Id =</span> record_id)</span>
+<span id="cb19-199"><a href="#cb19-199" aria-hidden="true" tabindex="-1"></a>exercisediary <span class="ot">&lt;-</span> data</span>
+<span id="cb19-200"><a href="#cb19-200" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">&quot;../data/imported/continuous/&quot;</span></span>
+<span id="cb19-201"><a href="#cb19-201" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">dir.exists</span>(path)) <span class="fu">dir.create</span>(path, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-202"><a href="#cb19-202" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(exercisediary, <span class="at">file =</span> <span class="st">&quot;../data/imported/continuous/exercisediary.RData&quot;</span>)</span>
+<span id="cb19-203"><a href="#cb19-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
