@@ -50,7 +50,8 @@ files <- filefinder("currentconditions", continuous = TRUE, individual = TRUE)
 data <-
   read_csv(files, show_col_types = FALSE) |> 
   drop_na(redcap_repeat_instance) |> 
-    rename_with(\(x) str_remove_all(x,"_v2"))
+    rename_with(\(x) str_remove_all(x,"_v2")) |> 
+  mutate(record_id = str_replace(record_id, "UCRS", "UCR_S"))
 #check column types
 coltype_check <- coltype_checker(codebook, data)
 coltype_check$details |> gt()
