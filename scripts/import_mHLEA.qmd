@@ -49,7 +49,7 @@ codebook <- prepare_codebook("MeLiDosEveningDiaries_DataDictionary_2024-10-16.cs
 files <- filefinder("mHLEA_digital", continuous = TRUE, individual = TRUE)
 #import files
 data <- 
-  read_csv(files, show_col_types = FALSE) |> 
+  read_csv(files, show_col_types = FALSE, id = "id") |> 
   drop_na(redcap_repeat_instance) |> 
   rename_with(\(x) str_remove(x, "_v2$")) |>  #check column types
       mutate(
