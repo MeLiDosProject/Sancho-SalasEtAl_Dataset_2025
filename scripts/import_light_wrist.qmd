@@ -28,8 +28,9 @@ library(patchwork)
 library(rlang)
 library(here)
 
-remote <- 
-  "https://raw.githubusercontent.com/MeLiDosProject/Data_Metadata_Conventions/main/scripts/"
+metadata_root <- Sys.getenv("MELIDOS_METADATA_ROOT", unset = "../metadata")
+stopifnot(dir.exists(file.path(metadata_root, "scripts")))
+remote <- paste0(normalizePath(file.path(metadata_root, "scripts")), "/")
 
 c(
   "filefinder",
@@ -89,7 +90,7 @@ Study_dates <-
   group_by(Id)
 
 #add the trim information to the dataset and filter by it
-data2 <- 
+data <-
   data |> 
   add_states(Study_dates) |> 
   dplyr::filter(trial) |> 
@@ -100,6 +101,7 @@ data |> gg_overview()
 
 
 ```{r}
+#| purl: false
 data |> has_gaps()
 data |> has_irregulars()
 data |> gg_gaps(group.by.days = TRUE, show.irregulars = TRUE, full.days = FALSE)
@@ -122,7 +124,7 @@ data_cleaned |> gap_table(MEDI) |> cols_hide(ends_with("_n"))
 
 ```{r}
 data_cleaned <- 
-  data_cleaned |> mutate(position = "wrist")
+  data_cleaned |> mutate(Id = factor(Id), position = "wrist")
 
 light_wrist_1min <- 
 data_cleaned |> 
