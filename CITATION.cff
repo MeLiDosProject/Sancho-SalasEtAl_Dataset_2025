@@ -40,7 +40,7 @@ identifiers:
     value: 10.5281/zenodo.17289456
     description: Zenodo Archive (latest version)
 repository-code: >-
-  https://github.com/MeLiDosProject/GuidolinEtAl_Dataset_2025
+  https://github.com/MeLiDosProject/Sancho-SalasEtAl_Dataset_2025
 url: 'https://www.melidos.eu'
 repository: >-
   https://github.com/MeLiDosProject/Sancho-SalasEtAl_Dataset_2025
@@ -60,5 +60,5 @@ keywords:
   - melanopic
   - naturalistic setting
 license: CC-BY-4.0
-version: 1.2.0
+version: 1.2.1
 date-released: '2026-11-23'

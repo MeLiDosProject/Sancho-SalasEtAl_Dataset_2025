@@ -1,5 +1,9 @@
 # Changes
 
+## v1.2.1 (2026-11-23)
+
+Correct the citation metadata repository link to the UCR dataset. Data values are unchanged from v1.2.0; the preprocessing updates below remain included.
+
 ## v1.2.0 (2026-11-23)
 
 This update improves data preprocessing and quality.

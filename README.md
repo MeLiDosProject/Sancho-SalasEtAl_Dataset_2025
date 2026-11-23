@@ -8,7 +8,7 @@
 
 ### Personal light exposure dataset for San Pedro, San José, Costa Rica; collected by Universidad de Costa Rica (UCR) and used to model the protocol of Guidolin et al. 2024 (MeLiDos field study)
 
-**Version v1.2.0**
+**Version v1.2.1**
 
 <!-- badges: start -->
 
@@ -55,7 +55,7 @@ APA reference:
 
 > Sancho-Salas, A., von-Breymann, H., Zauner, J., & Spitschan, M.,
 > (2026). Personal light exposure dataset for San Pedro, San José, Costa
-> Rica (Version 1.2.0) \[Data set\]. URL:
+> Rica (Version 1.2.1) \[Data set\]. URL:
 > <https://github.com/MeLiDosProject/Sancho-SalasEtAl_Dataset_2025>.
 > DOI: 10.5281/zenodo.17289456
 
